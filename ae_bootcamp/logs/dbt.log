@@ -1,0 +1,1139 @@
+[0m18:25:31.418105 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7efc7246a470>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7efc711dead0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7efc711deb00>]}
+
+
+============================== 18:25:31.420883 | a618bd31-d832-417c-8351-5a52e83ec9f7 ==============================
+[0m18:25:31.420883 [info ] [MainThread]: Running with dbt=1.5.1
+[0m18:25:31.421192 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/abelgideons/.dbt', 'fail_fast': 'False', 'version_check': 'True', 'log_path': '/home/abelgideons/analytics-engineer-bootcamp/ae_bootcamp/logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m18:25:31.421403 [info ] [MainThread]: dbt version: 1.5.1
+[0m18:25:31.421599 [info ] [MainThread]: python version: 3.10.6
+[0m18:25:31.421789 [info ] [MainThread]: python path: /home/abelgideons/analytics-engineer-bootcamp/dbt-env/bin/python3
+[0m18:25:31.421967 [info ] [MainThread]: os info: Linux-5.10.16.3-microsoft-standard-WSL2-x86_64-with-glibc2.35
+[0m18:25:31.422130 [info ] [MainThread]: Using profiles.yml file at /home/abelgideons/.dbt/profiles.yml
+[0m18:25:31.422300 [info ] [MainThread]: Using dbt_project.yml file at /home/abelgideons/analytics-engineer-bootcamp/ae_bootcamp/dbt_project.yml
+[0m18:25:31.422460 [info ] [MainThread]: Configuration:
+[0m18:25:31.812027 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m18:25:31.824909 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m18:25:31.825245 [info ] [MainThread]: Required dependencies:
+[0m18:25:31.825510 [debug] [MainThread]: Executing "git --help"
+[0m18:25:31.830476 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m18:25:31.831837 [debug] [MainThread]: STDERR: "b''"
+[0m18:25:31.832233 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m18:25:31.832733 [info ] [MainThread]: Connection:
+[0m18:25:31.833408 [info ] [MainThread]:   method: oauth
+[0m18:25:31.835173 [info ] [MainThread]:   database: sunny-catwalk-388616
+[0m18:25:31.835977 [info ] [MainThread]:   schema: dbt_abel
+[0m18:25:31.836614 [info ] [MainThread]:   location: EU
+[0m18:25:31.837062 [info ] [MainThread]:   priority: interactive
+[0m18:25:31.837459 [info ] [MainThread]:   timeout_seconds: 300
+[0m18:25:31.837699 [info ] [MainThread]:   maximum_bytes_billed: None
+[0m18:25:31.837904 [info ] [MainThread]:   execution_project: sunny-catwalk-388616
+[0m18:25:31.838067 [info ] [MainThread]:   job_retry_deadline_seconds: None
+[0m18:25:31.838227 [info ] [MainThread]:   job_retries: 1
+[0m18:25:31.838421 [info ] [MainThread]:   job_creation_timeout_seconds: None
+[0m18:25:31.838605 [info ] [MainThread]:   job_execution_timeout_seconds: 300
+[0m18:25:31.838759 [info ] [MainThread]:   gcs_bucket: None
+[0m18:25:31.839206 [debug] [MainThread]: Acquiring new bigquery connection 'debug'
+[0m18:25:31.839405 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m18:25:34.459543 [debug] [MainThread]: On debug: select 1 as id
+[0m18:25:37.420372 [debug] [MainThread]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=sunny-catwalk-388616&j=bq:EU:d0551e73-6768-455a-beb6-819b63329eff&page=queryresults
+[0m18:25:37.421344 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m18:25:37.422070 [info ] [MainThread]: [32mAll checks passed![0m
+[0m18:25:37.422987 [debug] [MainThread]: Command `dbt debug` succeeded at 18:25:37.422811 after 6.02 seconds
+[0m18:25:37.423441 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m18:25:37.423838 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7efc7246a470>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7efc6f0e84c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7efc6f0e8d30>]}
+[0m18:25:37.424426 [debug] [MainThread]: Flushing usage events
+[0m18:27:00.889384 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f159773e4d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f15963dec50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f15963debc0>]}
+
+
+============================== 18:27:00.890950 | 17b217a7-8de0-49bf-b396-d4a37ee57fcf ==============================
+[0m18:27:00.890950 [info ] [MainThread]: Running with dbt=1.5.1
+[0m18:27:00.891291 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': '/home/abelgideons/analytics-engineer-bootcamp/ae_bootcamp/logs', 'fail_fast': 'False', 'profiles_dir': '/home/abelgideons/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'log_format': 'default', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m18:27:01.086429 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '17b217a7-8de0-49bf-b396-d4a37ee57fcf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f159720aa10>]}
+[0m18:27:01.093701 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '17b217a7-8de0-49bf-b396-d4a37ee57fcf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f15942ed870>]}
+[0m18:27:01.142917 [debug] [MainThread]: checksum: 51f6b581eba8f8101bc020bf9faf8f96af641e2da86d581f66e2bdf0ff384b1c, vars: {}, profile: , target: , version: 1.5.1
+[0m18:27:01.143492 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m18:27:01.144075 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '17b217a7-8de0-49bf-b396-d4a37ee57fcf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f15942fe2f0>]}
+[0m18:27:01.562447 [debug] [MainThread]: 1699: static parser successfully parsed example/my_second_dbt_model.sql
+[0m18:27:01.570304 [debug] [MainThread]: 1699: static parser successfully parsed example/my_first_dbt_model.sql
+[0m18:27:01.636306 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '17b217a7-8de0-49bf-b396-d4a37ee57fcf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1594085090>]}
+[0m18:27:01.639833 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '17b217a7-8de0-49bf-b396-d4a37ee57fcf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f15940862f0>]}
+[0m18:27:01.640093 [info ] [MainThread]: Found 2 models, 4 tests, 0 snapshots, 0 analyses, 353 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics, 0 groups
+[0m18:27:01.640317 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '17b217a7-8de0-49bf-b396-d4a37ee57fcf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f15940847f0>]}
+[0m18:27:01.641905 [info ] [MainThread]: 
+[0m18:27:01.642414 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m18:27:01.668385 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_sunny-catwalk-388616'
+[0m18:27:01.669010 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:27:03.333037 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_sunny-catwalk-388616, now create_sunny-catwalk-388616_dbt_abel)
+[0m18:27:03.334565 [debug] [ThreadPool]: Creating schema "database: "sunny-catwalk-388616"
+schema: "dbt_abel"
+"
+[0m18:27:03.344431 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m18:27:03.344671 [debug] [ThreadPool]: On create_sunny-catwalk-388616_dbt_abel: /* {"app": "dbt", "dbt_version": "1.5.1", "profile_name": "ae_bootcamp", "target_name": "dev", "connection_name": "create_sunny-catwalk-388616_dbt_abel"} */
+create schema if not exists `sunny-catwalk-388616`.`dbt_abel`
+  
+[0m18:27:07.117755 [debug] [ThreadPool]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=sunny-catwalk-388616&j=bq:EU:8ee09af9-b961-41c3-a673-6777333d4af7&page=queryresults
+[0m18:27:07.121190 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_sunny-catwalk-388616_dbt_abel, now list_sunny-catwalk-388616_dbt_abel)
+[0m18:27:07.121745 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m18:27:08.448561 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '17b217a7-8de0-49bf-b396-d4a37ee57fcf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1594087d90>]}
+[0m18:27:08.450011 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m18:27:08.450709 [info ] [MainThread]: 
+[0m18:27:08.497590 [debug] [Thread-1 (]: Began running node model.ae_bootcamp.my_first_dbt_model
+[0m18:27:08.498312 [info ] [Thread-1 (]: 1 of 2 START sql table model dbt_abel.my_first_dbt_model ....................... [RUN]
+[0m18:27:08.498985 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_sunny-catwalk-388616_dbt_abel, now model.ae_bootcamp.my_first_dbt_model)
+[0m18:27:08.499225 [debug] [Thread-1 (]: Began compiling node model.ae_bootcamp.my_first_dbt_model
+[0m18:27:08.501267 [debug] [Thread-1 (]: Writing injected SQL for node "model.ae_bootcamp.my_first_dbt_model"
+[0m18:27:08.501826 [debug] [Thread-1 (]: Timing info for model.ae_bootcamp.my_first_dbt_model (compile): 18:27:08.499343 => 18:27:08.501678
+[0m18:27:08.502039 [debug] [Thread-1 (]: Began executing node model.ae_bootcamp.my_first_dbt_model
+[0m18:27:08.531076 [debug] [Thread-1 (]: Writing runtime sql for node "model.ae_bootcamp.my_first_dbt_model"
+[0m18:27:08.531790 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:27:08.532093 [debug] [Thread-1 (]: On model.ae_bootcamp.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.5.1", "profile_name": "ae_bootcamp", "target_name": "dev", "node_id": "model.ae_bootcamp.my_first_dbt_model"} */
+
+  
+    
+
+    create or replace table `sunny-catwalk-388616`.`dbt_abel`.`my_first_dbt_model`
+    
+    
+
+    OPTIONS()
+    as (
+      /*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+with source_data as (
+
+    select 1 as id
+    union all
+    select null as id
+
+)
+
+select *
+from source_data
+
+/*
+    Uncomment the line below to remove records with null `id` values
+*/
+
+-- where id is not null
+    );
+  
+[0m18:27:13.162352 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=sunny-catwalk-388616&j=bq:EU:5ad45c1c-1f7f-4b0a-ab87-7a9743a8b80c&page=queryresults
+[0m18:27:13.183002 [debug] [Thread-1 (]: Timing info for model.ae_bootcamp.my_first_dbt_model (execute): 18:27:08.502604 => 18:27:13.182759
+[0m18:27:13.183780 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '17b217a7-8de0-49bf-b396-d4a37ee57fcf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f15941f24d0>]}
+[0m18:27:13.184376 [info ] [Thread-1 (]: 1 of 2 OK created sql table model dbt_abel.my_first_dbt_model .................. [[32mCREATE TABLE (2.0 rows, 0 processed)[0m in 4.68s]
+[0m18:27:13.185005 [debug] [Thread-1 (]: Finished running node model.ae_bootcamp.my_first_dbt_model
+[0m18:27:13.186034 [debug] [Thread-1 (]: Began running node model.ae_bootcamp.my_second_dbt_model
+[0m18:27:13.186451 [info ] [Thread-1 (]: 2 of 2 START sql view model dbt_abel.my_second_dbt_model ....................... [RUN]
+[0m18:27:13.187061 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.ae_bootcamp.my_first_dbt_model, now model.ae_bootcamp.my_second_dbt_model)
+[0m18:27:13.187331 [debug] [Thread-1 (]: Began compiling node model.ae_bootcamp.my_second_dbt_model
+[0m18:27:13.189425 [debug] [Thread-1 (]: Writing injected SQL for node "model.ae_bootcamp.my_second_dbt_model"
+[0m18:27:13.189806 [debug] [Thread-1 (]: Timing info for model.ae_bootcamp.my_second_dbt_model (compile): 18:27:13.187481 => 18:27:13.189673
+[0m18:27:13.190002 [debug] [Thread-1 (]: Began executing node model.ae_bootcamp.my_second_dbt_model
+[0m18:27:13.207592 [debug] [Thread-1 (]: Writing runtime sql for node "model.ae_bootcamp.my_second_dbt_model"
+[0m18:27:13.208121 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:27:13.208420 [debug] [Thread-1 (]: On model.ae_bootcamp.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.5.1", "profile_name": "ae_bootcamp", "target_name": "dev", "node_id": "model.ae_bootcamp.my_second_dbt_model"} */
+
+
+  create or replace view `sunny-catwalk-388616`.`dbt_abel`.`my_second_dbt_model`
+  OPTIONS()
+  as -- Use the `ref` function to select from other models
+
+select *
+from `sunny-catwalk-388616`.`dbt_abel`.`my_first_dbt_model`
+where id = 1;
+
+
+[0m18:27:16.136221 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=sunny-catwalk-388616&j=bq:EU:a005f6f3-c6d0-418e-aa48-ae5baddd19cf&page=queryresults
+[0m18:27:16.139522 [debug] [Thread-1 (]: Timing info for model.ae_bootcamp.my_second_dbt_model (execute): 18:27:13.190119 => 18:27:16.139190
+[0m18:27:16.140580 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '17b217a7-8de0-49bf-b396-d4a37ee57fcf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1594084b50>]}
+[0m18:27:16.141472 [info ] [Thread-1 (]: 2 of 2 OK created sql view model dbt_abel.my_second_dbt_model .................. [[32mCREATE VIEW (0 processed)[0m in 2.95s]
+[0m18:27:16.142513 [debug] [Thread-1 (]: Finished running node model.ae_bootcamp.my_second_dbt_model
+[0m18:27:16.145319 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m18:27:16.145722 [debug] [MainThread]: Connection 'model.ae_bootcamp.my_second_dbt_model' was properly closed.
+[0m18:27:16.146075 [info ] [MainThread]: 
+[0m18:27:16.146524 [info ] [MainThread]: Finished running 1 table model, 1 view model in 0 hours 0 minutes and 14.50 seconds (14.50s).
+[0m18:27:16.147444 [debug] [MainThread]: Command end result
+[0m18:27:16.154668 [info ] [MainThread]: 
+[0m18:27:16.155105 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m18:27:16.155313 [info ] [MainThread]: 
+[0m18:27:16.155541 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+[0m18:27:16.155956 [debug] [MainThread]: Command `dbt run` succeeded at 18:27:16.155877 after 15.27 seconds
+[0m18:27:16.156171 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f159773e4d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f15940afa30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f15942e9f60>]}
+[0m18:27:16.163271 [debug] [MainThread]: Flushing usage events
+[0m19:09:09.905341 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe316bc6560>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe3156aec50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe3156aecb0>]}
+
+
+============================== 19:09:09.906860 | 90415538-c91a-4eb4-8056-1cbd78a6425d ==============================
+[0m19:09:09.906860 [info ] [MainThread]: Running with dbt=1.5.1
+[0m19:09:09.907185 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/abelgideons/.dbt', 'debug': 'False', 'fail_fast': 'False', 'log_path': '/home/abelgideons/analytics-engineer-bootcamp/ae_bootcamp/logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m19:09:10.103792 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '90415538-c91a-4eb4-8056-1cbd78a6425d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe3169c6ec0>]}
+[0m19:09:10.111728 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '90415538-c91a-4eb4-8056-1cbd78a6425d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe3135b8a60>]}
+[0m19:09:10.118701 [debug] [MainThread]: checksum: 51f6b581eba8f8101bc020bf9faf8f96af641e2da86d581f66e2bdf0ff384b1c, vars: {}, profile: , target: , version: 1.5.1
+[0m19:09:10.123189 [info ] [MainThread]: Unable to do partial parsing because profile has changed
+[0m19:09:10.123469 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '90415538-c91a-4eb4-8056-1cbd78a6425d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe3135cd510>]}
+[0m19:09:10.507038 [debug] [MainThread]: 1699: static parser successfully parsed example/my_second_dbt_model.sql
+[0m19:09:10.516003 [debug] [MainThread]: 1699: static parser successfully parsed example/my_first_dbt_model.sql
+[0m19:09:10.561094 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '90415538-c91a-4eb4-8056-1cbd78a6425d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe31339e6b0>]}
+[0m19:09:10.565782 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '90415538-c91a-4eb4-8056-1cbd78a6425d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe313391210>]}
+[0m19:09:10.566121 [info ] [MainThread]: Found 2 models, 4 tests, 0 snapshots, 0 analyses, 353 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics, 0 groups
+[0m19:09:10.566376 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '90415538-c91a-4eb4-8056-1cbd78a6425d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe313391750>]}
+[0m19:09:10.567304 [info ] [MainThread]: 
+[0m19:09:10.567868 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m19:09:10.568797 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_sunny-catwalk-388616'
+[0m19:09:10.569139 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m19:09:13.741938 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_sunny-catwalk-388616, now list_sunny-catwalk-388616_dbt_abel)
+[0m19:09:13.742532 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m19:09:14.565012 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '90415538-c91a-4eb4-8056-1cbd78a6425d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe313391720>]}
+[0m19:09:14.566545 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m19:09:14.567351 [info ] [MainThread]: 
+[0m19:09:14.572793 [debug] [Thread-1 (]: Began running node model.ae_bootcamp.my_first_dbt_model
+[0m19:09:14.573392 [info ] [Thread-1 (]: 1 of 2 START sql table model dbt_abel.my_first_dbt_model ....................... [RUN]
+[0m19:09:14.574093 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_sunny-catwalk-388616_dbt_abel, now model.ae_bootcamp.my_first_dbt_model)
+[0m19:09:14.574420 [debug] [Thread-1 (]: Began compiling node model.ae_bootcamp.my_first_dbt_model
+[0m19:09:14.598419 [debug] [Thread-1 (]: Writing injected SQL for node "model.ae_bootcamp.my_first_dbt_model"
+[0m19:09:14.599485 [debug] [Thread-1 (]: Timing info for model.ae_bootcamp.my_first_dbt_model (compile): 19:09:14.574604 => 19:09:14.599246
+[0m19:09:14.599786 [debug] [Thread-1 (]: Began executing node model.ae_bootcamp.my_first_dbt_model
+[0m19:09:14.608667 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m19:09:16.013587 [debug] [Thread-1 (]: Writing runtime sql for node "model.ae_bootcamp.my_first_dbt_model"
+[0m19:09:16.014043 [debug] [Thread-1 (]: On model.ae_bootcamp.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.5.1", "profile_name": "ae_bootcamp", "target_name": "dev", "node_id": "model.ae_bootcamp.my_first_dbt_model"} */
+
+  
+    
+
+    create or replace table `sunny-catwalk-388616`.`dbt_abel`.`my_first_dbt_model`
+    
+    
+
+    OPTIONS()
+    as (
+      /*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+with source_data as (
+
+    select 1 as id
+    union all
+    select null as id
+
+)
+
+select *
+from source_data
+
+/*
+    Uncomment the line below to remove records with null `id` values
+*/
+
+-- where id is not null
+    );
+  
+[0m19:09:16.604578 [debug] [Thread-1 (]: BigQuery adapter: Unhandled error while running:
+/* {"app": "dbt", "dbt_version": "1.5.1", "profile_name": "ae_bootcamp", "target_name": "dev", "node_id": "model.ae_bootcamp.my_first_dbt_model"} */
+
+  
+    
+
+    create or replace table `sunny-catwalk-388616`.`dbt_abel`.`my_first_dbt_model`
+    
+    
+
+    OPTIONS()
+    as (
+      /*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+with source_data as (
+
+    select 1 as id
+    union all
+    select null as id
+
+)
+
+select *
+from source_data
+
+/*
+    Uncomment the line below to remove records with null `id` values
+*/
+
+-- where id is not null
+    );
+  
+[0m19:09:16.605410 [debug] [Thread-1 (]: BigQuery adapter: 404 Not found: Dataset sunny-catwalk-388616:dbt_abel was not found in location asia-southeast2
+
+Location: asia-southeast2
+Job ID: 5d7cb44a-d082-4450-b7d7-21f00df80099
+
+[0m19:09:16.606232 [debug] [Thread-1 (]: Timing info for model.ae_bootcamp.my_first_dbt_model (execute): 19:09:14.599938 => 19:09:16.605910
+[0m19:09:16.648312 [debug] [Thread-1 (]: Runtime Error in model my_first_dbt_model (models/example/my_first_dbt_model.sql)
+  404 Not found: Dataset sunny-catwalk-388616:dbt_abel was not found in location asia-southeast2
+  
+  Location: asia-southeast2
+  Job ID: 5d7cb44a-d082-4450-b7d7-21f00df80099
+  
+[0m19:09:16.649072 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '90415538-c91a-4eb4-8056-1cbd78a6425d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe3133842b0>]}
+[0m19:09:16.649860 [error] [Thread-1 (]: 1 of 2 ERROR creating sql table model dbt_abel.my_first_dbt_model .............. [[31mERROR[0m in 2.08s]
+[0m19:09:16.650626 [debug] [Thread-1 (]: Finished running node model.ae_bootcamp.my_first_dbt_model
+[0m19:09:16.652242 [debug] [Thread-1 (]: Began running node model.ae_bootcamp.my_second_dbt_model
+[0m19:09:16.652780 [info ] [Thread-1 (]: 2 of 2 SKIP relation dbt_abel.my_second_dbt_model .............................. [[33mSKIP[0m]
+[0m19:09:16.653356 [debug] [Thread-1 (]: Finished running node model.ae_bootcamp.my_second_dbt_model
+[0m19:09:16.655090 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m19:09:16.655392 [debug] [MainThread]: Connection 'model.ae_bootcamp.my_first_dbt_model' was properly closed.
+[0m19:09:16.655973 [info ] [MainThread]: 
+[0m19:09:16.656338 [info ] [MainThread]: Finished running 1 table model, 1 view model in 0 hours 0 minutes and 6.09 seconds (6.09s).
+[0m19:09:16.656806 [debug] [MainThread]: Command end result
+[0m19:09:16.671302 [info ] [MainThread]: 
+[0m19:09:16.673084 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m19:09:16.673522 [info ] [MainThread]: 
+[0m19:09:16.673872 [error] [MainThread]: [33mRuntime Error in model my_first_dbt_model (models/example/my_first_dbt_model.sql)[0m
+[0m19:09:16.674223 [error] [MainThread]:   404 Not found: Dataset sunny-catwalk-388616:dbt_abel was not found in location asia-southeast2
+[0m19:09:16.674529 [error] [MainThread]:   
+[0m19:09:16.674905 [error] [MainThread]:   Location: asia-southeast2
+[0m19:09:16.675233 [error] [MainThread]:   Job ID: 5d7cb44a-d082-4450-b7d7-21f00df80099
+[0m19:09:16.675695 [error] [MainThread]:   
+[0m19:09:16.676012 [info ] [MainThread]: 
+[0m19:09:16.676381 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=1 TOTAL=2
+[0m19:09:16.677088 [debug] [MainThread]: Command `dbt run` failed at 19:09:16.676981 after 6.78 seconds
+[0m19:09:16.677412 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe316bc6560>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe3133c2380>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe31345ce50>]}
+[0m19:09:16.677738 [debug] [MainThread]: Flushing usage events
+[0m19:09:50.612924 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa509df6500>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa508ddec80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa508ddebf0>]}
+
+
+============================== 19:09:50.614296 | c23de4e0-5ee0-4482-bc5d-6232a2822f96 ==============================
+[0m19:09:50.614296 [info ] [MainThread]: Running with dbt=1.5.1
+[0m19:09:50.614599 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'profiles_dir': '/home/abelgideons/.dbt', 'log_path': '/home/abelgideons/analytics-engineer-bootcamp/ae_bootcamp/logs', 'version_check': 'True', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m19:09:50.813247 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'c23de4e0-5ee0-4482-bc5d-6232a2822f96', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa50985f730>]}
+[0m19:09:50.820551 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'c23de4e0-5ee0-4482-bc5d-6232a2822f96', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa5069f0100>]}
+[0m19:09:50.827253 [debug] [MainThread]: checksum: 51f6b581eba8f8101bc020bf9faf8f96af641e2da86d581f66e2bdf0ff384b1c, vars: {}, profile: , target: , version: 1.5.1
+[0m19:09:50.837353 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m19:09:50.837520 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m19:09:50.840905 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'c23de4e0-5ee0-4482-bc5d-6232a2822f96', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa5067d5510>]}
+[0m19:09:50.845086 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'c23de4e0-5ee0-4482-bc5d-6232a2822f96', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa50679d3f0>]}
+[0m19:09:50.845326 [info ] [MainThread]: Found 2 models, 4 tests, 0 snapshots, 0 analyses, 353 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics, 0 groups
+[0m19:09:50.845602 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'c23de4e0-5ee0-4482-bc5d-6232a2822f96', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa50679d4e0>]}
+[0m19:09:50.846447 [info ] [MainThread]: 
+[0m19:09:50.846919 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m19:09:50.847834 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_sunny-catwalk-388616'
+[0m19:09:50.848104 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m19:09:54.305314 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_sunny-catwalk-388616, now create_sunny-catwalk-388616_dbt_abel)
+[0m19:09:54.306601 [debug] [ThreadPool]: Creating schema "database: "sunny-catwalk-388616"
+schema: "dbt_abel"
+"
+[0m19:09:54.318058 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m19:09:54.318548 [debug] [ThreadPool]: On create_sunny-catwalk-388616_dbt_abel: /* {"app": "dbt", "dbt_version": "1.5.1", "profile_name": "ae_bootcamp", "target_name": "dev", "connection_name": "create_sunny-catwalk-388616_dbt_abel"} */
+create schema if not exists `sunny-catwalk-388616`.`dbt_abel`
+  
+[0m19:10:00.076021 [debug] [ThreadPool]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=sunny-catwalk-388616&j=bq:asia-southeast2:57e8a881-cc4e-4bbc-9d2c-ea9aabe96f8e&page=queryresults
+[0m19:10:00.079956 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_sunny-catwalk-388616_dbt_abel, now list_sunny-catwalk-388616_dbt_abel)
+[0m19:10:00.080514 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m19:10:00.959892 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'c23de4e0-5ee0-4482-bc5d-6232a2822f96', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa50679c4c0>]}
+[0m19:10:00.961317 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m19:10:00.961994 [info ] [MainThread]: 
+[0m19:10:00.967392 [debug] [Thread-1 (]: Began running node model.ae_bootcamp.my_first_dbt_model
+[0m19:10:00.967877 [info ] [Thread-1 (]: 1 of 2 START sql table model dbt_abel.my_first_dbt_model ....................... [RUN]
+[0m19:10:00.968516 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_sunny-catwalk-388616_dbt_abel, now model.ae_bootcamp.my_first_dbt_model)
+[0m19:10:00.968791 [debug] [Thread-1 (]: Began compiling node model.ae_bootcamp.my_first_dbt_model
+[0m19:10:00.970891 [debug] [Thread-1 (]: Writing injected SQL for node "model.ae_bootcamp.my_first_dbt_model"
+[0m19:10:00.972249 [debug] [Thread-1 (]: Timing info for model.ae_bootcamp.my_first_dbt_model (compile): 19:10:00.968945 => 19:10:00.972092
+[0m19:10:00.972548 [debug] [Thread-1 (]: Began executing node model.ae_bootcamp.my_first_dbt_model
+[0m19:10:01.014289 [debug] [Thread-1 (]: Writing runtime sql for node "model.ae_bootcamp.my_first_dbt_model"
+[0m19:10:01.014864 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m19:10:01.015196 [debug] [Thread-1 (]: On model.ae_bootcamp.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.5.1", "profile_name": "ae_bootcamp", "target_name": "dev", "node_id": "model.ae_bootcamp.my_first_dbt_model"} */
+
+  
+    
+
+    create or replace table `sunny-catwalk-388616`.`dbt_abel`.`my_first_dbt_model`
+    
+    
+
+    OPTIONS()
+    as (
+      /*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+with source_data as (
+
+    select 1 as id
+    union all
+    select null as id
+
+)
+
+select *
+from source_data
+
+/*
+    Uncomment the line below to remove records with null `id` values
+*/
+
+-- where id is not null
+    );
+  
+[0m19:10:05.863865 [debug] [Thread-1 (]: Timing info for model.ae_bootcamp.my_first_dbt_model (execute): 19:10:00.972675 => 19:10:05.863168
+[0m19:10:05.865485 [error] [Thread-1 (]: [31mUnhandled error while executing target/run/ae_bootcamp/models/example/my_first_dbt_model.sql[0m
+404 GET https://bigquery.googleapis.com/bigquery/v2/projects/sunny-catwalk-388616/datasets/dbt_abel/tables/my_first_dbt_model?prettyPrint=false: Not found: Dataset sunny-catwalk-388616:dbt_abel
+[0m19:10:05.893477 [debug] [Thread-1 (]: Traceback (most recent call last):
+  File "/home/abelgideons/analytics-engineer-bootcamp/dbt-env/lib/python3.10/site-packages/dbt/task/base.py", line 388, in safe_run
+    result = self.compile_and_execute(manifest, ctx)
+  File "/home/abelgideons/analytics-engineer-bootcamp/dbt-env/lib/python3.10/site-packages/dbt/task/base.py", line 337, in compile_and_execute
+    result = self.run(ctx.node, manifest)
+  File "/home/abelgideons/analytics-engineer-bootcamp/dbt-env/lib/python3.10/site-packages/dbt/task/base.py", line 436, in run
+    return self.execute(compiled_node, manifest)
+  File "/home/abelgideons/analytics-engineer-bootcamp/dbt-env/lib/python3.10/site-packages/dbt/task/run.py", line 291, in execute
+    result = MacroGenerator(
+  File "/home/abelgideons/analytics-engineer-bootcamp/dbt-env/lib/python3.10/site-packages/dbt/clients/jinja.py", line 330, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/home/abelgideons/analytics-engineer-bootcamp/dbt-env/lib/python3.10/site-packages/dbt/clients/jinja.py", line 257, in call_macro
+    return macro(*args, **kwargs)
+  File "/home/abelgideons/analytics-engineer-bootcamp/dbt-env/lib/python3.10/site-packages/jinja2/runtime.py", line 763, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/home/abelgideons/analytics-engineer-bootcamp/dbt-env/lib/python3.10/site-packages/jinja2/runtime.py", line 777, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 89, in macro
+  File "/home/abelgideons/analytics-engineer-bootcamp/dbt-env/lib/python3.10/site-packages/jinja2/sandbox.py", line 393, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/home/abelgideons/analytics-engineer-bootcamp/dbt-env/lib/python3.10/site-packages/jinja2/runtime.py", line 298, in call
+    return __obj(*args, **kwargs)
+  File "/home/abelgideons/analytics-engineer-bootcamp/dbt-env/lib/python3.10/site-packages/dbt/clients/jinja.py", line 330, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/home/abelgideons/analytics-engineer-bootcamp/dbt-env/lib/python3.10/site-packages/dbt/clients/jinja.py", line 257, in call_macro
+    return macro(*args, **kwargs)
+  File "/home/abelgideons/analytics-engineer-bootcamp/dbt-env/lib/python3.10/site-packages/jinja2/runtime.py", line 763, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/home/abelgideons/analytics-engineer-bootcamp/dbt-env/lib/python3.10/site-packages/jinja2/runtime.py", line 777, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 52, in macro
+  File "/home/abelgideons/analytics-engineer-bootcamp/dbt-env/lib/python3.10/site-packages/jinja2/sandbox.py", line 393, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/home/abelgideons/analytics-engineer-bootcamp/dbt-env/lib/python3.10/site-packages/jinja2/runtime.py", line 298, in call
+    return __obj(*args, **kwargs)
+  File "/home/abelgideons/analytics-engineer-bootcamp/dbt-env/lib/python3.10/site-packages/dbt/adapters/base/impl.py", line 289, in execute
+    return self.connections.execute(sql=sql, auto_begin=auto_begin, fetch=fetch)
+  File "/home/abelgideons/analytics-engineer-bootcamp/dbt-env/lib/python3.10/site-packages/dbt/adapters/bigquery/connections.py", line 490, in execute
+    query_table = client.get_table(query_job.destination)
+  File "/home/abelgideons/analytics-engineer-bootcamp/dbt-env/lib/python3.10/site-packages/google/cloud/bigquery/client.py", line 1065, in get_table
+    api_response = self._call_api(
+  File "/home/abelgideons/analytics-engineer-bootcamp/dbt-env/lib/python3.10/site-packages/google/cloud/bigquery/client.py", line 813, in _call_api
+    return call()
+  File "/home/abelgideons/analytics-engineer-bootcamp/dbt-env/lib/python3.10/site-packages/google/api_core/retry.py", line 349, in retry_wrapped_func
+    return retry_target(
+  File "/home/abelgideons/analytics-engineer-bootcamp/dbt-env/lib/python3.10/site-packages/google/api_core/retry.py", line 191, in retry_target
+    return target()
+  File "/home/abelgideons/analytics-engineer-bootcamp/dbt-env/lib/python3.10/site-packages/google/cloud/_http/__init__.py", line 494, in api_request
+    raise exceptions.from_http_response(response)
+google.api_core.exceptions.NotFound: 404 GET https://bigquery.googleapis.com/bigquery/v2/projects/sunny-catwalk-388616/datasets/dbt_abel/tables/my_first_dbt_model?prettyPrint=false: Not found: Dataset sunny-catwalk-388616:dbt_abel
+
+[0m19:10:05.894120 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c23de4e0-5ee0-4482-bc5d-6232a2822f96', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa506639c60>]}
+[0m19:10:05.894591 [error] [Thread-1 (]: 1 of 2 ERROR creating sql table model dbt_abel.my_first_dbt_model .............. [[31mERROR[0m in 4.93s]
+[0m19:10:05.894946 [debug] [Thread-1 (]: Finished running node model.ae_bootcamp.my_first_dbt_model
+[0m19:10:05.895658 [debug] [Thread-1 (]: Began running node model.ae_bootcamp.my_second_dbt_model
+[0m19:10:05.895932 [info ] [Thread-1 (]: 2 of 2 SKIP relation dbt_abel.my_second_dbt_model .............................. [[33mSKIP[0m]
+[0m19:10:05.896233 [debug] [Thread-1 (]: Finished running node model.ae_bootcamp.my_second_dbt_model
+[0m19:10:05.897333 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m19:10:05.897511 [debug] [MainThread]: Connection 'model.ae_bootcamp.my_first_dbt_model' was properly closed.
+[0m19:10:05.897672 [info ] [MainThread]: 
+[0m19:10:05.897952 [info ] [MainThread]: Finished running 1 table model, 1 view model in 0 hours 0 minutes and 15.05 seconds (15.05s).
+[0m19:10:05.898248 [debug] [MainThread]: Command end result
+[0m19:10:05.905743 [info ] [MainThread]: 
+[0m19:10:05.906488 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m19:10:05.908212 [info ] [MainThread]: 
+[0m19:10:05.909204 [error] [MainThread]: [33m404 GET https://bigquery.googleapis.com/bigquery/v2/projects/sunny-catwalk-388616/datasets/dbt_abel/tables/my_first_dbt_model?prettyPrint=false: Not found: Dataset sunny-catwalk-388616:dbt_abel[0m
+[0m19:10:05.909681 [info ] [MainThread]: 
+[0m19:10:05.910083 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=1 TOTAL=2
+[0m19:10:05.910853 [debug] [MainThread]: Command `dbt run` failed at 19:10:05.910669 after 15.30 seconds
+[0m19:10:05.911203 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa509df6500>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa509931ae0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa506639c60>]}
+[0m19:10:05.911442 [debug] [MainThread]: Flushing usage events
+[0m19:11:45.490557 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4eae12a560>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4eacddece0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4eacddec50>]}
+
+
+============================== 19:11:45.491989 | 183acd89-cfdf-43f4-9814-2c047325a4d8 ==============================
+[0m19:11:45.491989 [info ] [MainThread]: Running with dbt=1.5.1
+[0m19:11:45.492292 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': '/home/abelgideons/analytics-engineer-bootcamp/ae_bootcamp/logs', 'fail_fast': 'False', 'profiles_dir': '/home/abelgideons/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m19:11:45.681643 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '183acd89-cfdf-43f4-9814-2c047325a4d8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4eadc0aec0>]}
+[0m19:11:45.689158 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '183acd89-cfdf-43f4-9814-2c047325a4d8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4eaacf0a60>]}
+[0m19:11:45.695487 [debug] [MainThread]: checksum: 51f6b581eba8f8101bc020bf9faf8f96af641e2da86d581f66e2bdf0ff384b1c, vars: {}, profile: , target: , version: 1.5.1
+[0m19:11:45.705291 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m19:11:45.705479 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m19:11:45.708566 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '183acd89-cfdf-43f4-9814-2c047325a4d8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4eaaad5570>]}
+[0m19:11:45.712331 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '183acd89-cfdf-43f4-9814-2c047325a4d8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4eaaa9d450>]}
+[0m19:11:45.712579 [info ] [MainThread]: Found 2 models, 4 tests, 0 snapshots, 0 analyses, 353 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics, 0 groups
+[0m19:11:45.712811 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '183acd89-cfdf-43f4-9814-2c047325a4d8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4eaaa9d540>]}
+[0m19:11:45.713559 [info ] [MainThread]: 
+[0m19:11:45.714023 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m19:11:45.715814 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_sunny-catwalk-388616'
+[0m19:11:45.716050 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m19:11:49.496551 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_sunny-catwalk-388616, now list_sunny-catwalk-388616_dbt_abel)
+[0m19:11:49.497406 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m19:11:50.308388 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '183acd89-cfdf-43f4-9814-2c047325a4d8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4eaaa7b9a0>]}
+[0m19:11:50.309183 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m19:11:50.309556 [info ] [MainThread]: 
+[0m19:11:50.312296 [debug] [Thread-1 (]: Began running node model.ae_bootcamp.my_first_dbt_model
+[0m19:11:50.312791 [info ] [Thread-1 (]: 1 of 2 START sql table model dbt_abel.my_first_dbt_model ....................... [RUN]
+[0m19:11:50.313588 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_sunny-catwalk-388616_dbt_abel, now model.ae_bootcamp.my_first_dbt_model)
+[0m19:11:50.313917 [debug] [Thread-1 (]: Began compiling node model.ae_bootcamp.my_first_dbt_model
+[0m19:11:50.317048 [debug] [Thread-1 (]: Writing injected SQL for node "model.ae_bootcamp.my_first_dbt_model"
+[0m19:11:50.317839 [debug] [Thread-1 (]: Timing info for model.ae_bootcamp.my_first_dbt_model (compile): 19:11:50.314136 => 19:11:50.317618
+[0m19:11:50.318301 [debug] [Thread-1 (]: Began executing node model.ae_bootcamp.my_first_dbt_model
+[0m19:11:50.351111 [debug] [Thread-1 (]: Writing runtime sql for node "model.ae_bootcamp.my_first_dbt_model"
+[0m19:11:50.352646 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m19:11:50.353412 [debug] [Thread-1 (]: On model.ae_bootcamp.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.5.1", "profile_name": "ae_bootcamp", "target_name": "dev", "node_id": "model.ae_bootcamp.my_first_dbt_model"} */
+
+  
+    
+
+    create or replace table `sunny-catwalk-388616`.`dbt_abel`.`my_first_dbt_model`
+    
+    
+
+    OPTIONS()
+    as (
+      /*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+with source_data as (
+
+    select 1 as id
+    union all
+    select null as id
+
+)
+
+select *
+from source_data
+
+/*
+    Uncomment the line below to remove records with null `id` values
+*/
+
+-- where id is not null
+    );
+  
+[0m19:11:53.421014 [debug] [Thread-1 (]: Timing info for model.ae_bootcamp.my_first_dbt_model (execute): 19:11:50.318728 => 19:11:53.420486
+[0m19:11:53.422236 [error] [Thread-1 (]: [31mUnhandled error while executing target/run/ae_bootcamp/models/example/my_first_dbt_model.sql[0m
+404 GET https://bigquery.googleapis.com/bigquery/v2/projects/sunny-catwalk-388616/datasets/dbt_abel/tables/my_first_dbt_model?prettyPrint=false: Not found: Dataset sunny-catwalk-388616:dbt_abel
+[0m19:11:53.426198 [debug] [Thread-1 (]: Traceback (most recent call last):
+  File "/home/abelgideons/analytics-engineer-bootcamp/dbt-env/lib/python3.10/site-packages/dbt/task/base.py", line 388, in safe_run
+    result = self.compile_and_execute(manifest, ctx)
+  File "/home/abelgideons/analytics-engineer-bootcamp/dbt-env/lib/python3.10/site-packages/dbt/task/base.py", line 337, in compile_and_execute
+    result = self.run(ctx.node, manifest)
+  File "/home/abelgideons/analytics-engineer-bootcamp/dbt-env/lib/python3.10/site-packages/dbt/task/base.py", line 436, in run
+    return self.execute(compiled_node, manifest)
+  File "/home/abelgideons/analytics-engineer-bootcamp/dbt-env/lib/python3.10/site-packages/dbt/task/run.py", line 291, in execute
+    result = MacroGenerator(
+  File "/home/abelgideons/analytics-engineer-bootcamp/dbt-env/lib/python3.10/site-packages/dbt/clients/jinja.py", line 330, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/home/abelgideons/analytics-engineer-bootcamp/dbt-env/lib/python3.10/site-packages/dbt/clients/jinja.py", line 257, in call_macro
+    return macro(*args, **kwargs)
+  File "/home/abelgideons/analytics-engineer-bootcamp/dbt-env/lib/python3.10/site-packages/jinja2/runtime.py", line 763, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/home/abelgideons/analytics-engineer-bootcamp/dbt-env/lib/python3.10/site-packages/jinja2/runtime.py", line 777, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 89, in macro
+  File "/home/abelgideons/analytics-engineer-bootcamp/dbt-env/lib/python3.10/site-packages/jinja2/sandbox.py", line 393, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/home/abelgideons/analytics-engineer-bootcamp/dbt-env/lib/python3.10/site-packages/jinja2/runtime.py", line 298, in call
+    return __obj(*args, **kwargs)
+  File "/home/abelgideons/analytics-engineer-bootcamp/dbt-env/lib/python3.10/site-packages/dbt/clients/jinja.py", line 330, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/home/abelgideons/analytics-engineer-bootcamp/dbt-env/lib/python3.10/site-packages/dbt/clients/jinja.py", line 257, in call_macro
+    return macro(*args, **kwargs)
+  File "/home/abelgideons/analytics-engineer-bootcamp/dbt-env/lib/python3.10/site-packages/jinja2/runtime.py", line 763, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/home/abelgideons/analytics-engineer-bootcamp/dbt-env/lib/python3.10/site-packages/jinja2/runtime.py", line 777, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 52, in macro
+  File "/home/abelgideons/analytics-engineer-bootcamp/dbt-env/lib/python3.10/site-packages/jinja2/sandbox.py", line 393, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/home/abelgideons/analytics-engineer-bootcamp/dbt-env/lib/python3.10/site-packages/jinja2/runtime.py", line 298, in call
+    return __obj(*args, **kwargs)
+  File "/home/abelgideons/analytics-engineer-bootcamp/dbt-env/lib/python3.10/site-packages/dbt/adapters/base/impl.py", line 289, in execute
+    return self.connections.execute(sql=sql, auto_begin=auto_begin, fetch=fetch)
+  File "/home/abelgideons/analytics-engineer-bootcamp/dbt-env/lib/python3.10/site-packages/dbt/adapters/bigquery/connections.py", line 490, in execute
+    query_table = client.get_table(query_job.destination)
+  File "/home/abelgideons/analytics-engineer-bootcamp/dbt-env/lib/python3.10/site-packages/google/cloud/bigquery/client.py", line 1065, in get_table
+    api_response = self._call_api(
+  File "/home/abelgideons/analytics-engineer-bootcamp/dbt-env/lib/python3.10/site-packages/google/cloud/bigquery/client.py", line 813, in _call_api
+    return call()
+  File "/home/abelgideons/analytics-engineer-bootcamp/dbt-env/lib/python3.10/site-packages/google/api_core/retry.py", line 349, in retry_wrapped_func
+    return retry_target(
+  File "/home/abelgideons/analytics-engineer-bootcamp/dbt-env/lib/python3.10/site-packages/google/api_core/retry.py", line 191, in retry_target
+    return target()
+  File "/home/abelgideons/analytics-engineer-bootcamp/dbt-env/lib/python3.10/site-packages/google/cloud/_http/__init__.py", line 494, in api_request
+    raise exceptions.from_http_response(response)
+google.api_core.exceptions.NotFound: 404 GET https://bigquery.googleapis.com/bigquery/v2/projects/sunny-catwalk-388616/datasets/dbt_abel/tables/my_first_dbt_model?prettyPrint=false: Not found: Dataset sunny-catwalk-388616:dbt_abel
+
+[0m19:11:53.427109 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '183acd89-cfdf-43f4-9814-2c047325a4d8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4eaa96c9d0>]}
+[0m19:11:53.427930 [error] [Thread-1 (]: 1 of 2 ERROR creating sql table model dbt_abel.my_first_dbt_model .............. [[31mERROR[0m in 3.11s]
+[0m19:11:53.428799 [debug] [Thread-1 (]: Finished running node model.ae_bootcamp.my_first_dbt_model
+[0m19:11:53.430173 [debug] [Thread-1 (]: Began running node model.ae_bootcamp.my_second_dbt_model
+[0m19:11:53.430826 [info ] [Thread-1 (]: 2 of 2 SKIP relation dbt_abel.my_second_dbt_model .............................. [[33mSKIP[0m]
+[0m19:11:53.431806 [debug] [Thread-1 (]: Finished running node model.ae_bootcamp.my_second_dbt_model
+[0m19:11:53.433769 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m19:11:53.434050 [debug] [MainThread]: Connection 'model.ae_bootcamp.my_first_dbt_model' was properly closed.
+[0m19:11:53.434301 [info ] [MainThread]: 
+[0m19:11:53.434615 [info ] [MainThread]: Finished running 1 table model, 1 view model in 0 hours 0 minutes and 7.72 seconds (7.72s).
+[0m19:11:53.435053 [debug] [MainThread]: Command end result
+[0m19:11:53.444645 [info ] [MainThread]: 
+[0m19:11:53.445047 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m19:11:53.445334 [info ] [MainThread]: 
+[0m19:11:53.445566 [error] [MainThread]: [33m404 GET https://bigquery.googleapis.com/bigquery/v2/projects/sunny-catwalk-388616/datasets/dbt_abel/tables/my_first_dbt_model?prettyPrint=false: Not found: Dataset sunny-catwalk-388616:dbt_abel[0m
+[0m19:11:53.445769 [info ] [MainThread]: 
+[0m19:11:53.445951 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=1 TOTAL=2
+[0m19:11:53.446292 [debug] [MainThread]: Command `dbt run` failed at 19:11:53.446224 after 7.96 seconds
+[0m19:11:53.446508 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4eae12a560>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4eae1f1c30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4eaa96e5c0>]}
+[0m19:11:53.446714 [debug] [MainThread]: Flushing usage events
+[0m19:14:31.756233 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8cb940a500>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8cb83dec80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8cb83debf0>]}
+
+
+============================== 19:14:31.757624 | 02d6489a-539b-453a-96da-1ec74295e834 ==============================
+[0m19:14:31.757624 [info ] [MainThread]: Running with dbt=1.5.1
+[0m19:14:31.757931 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': '/home/abelgideons/analytics-engineer-bootcamp/ae_bootcamp/logs', 'fail_fast': 'False', 'profiles_dir': '/home/abelgideons/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m19:14:31.937893 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '02d6489a-539b-453a-96da-1ec74295e834', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8cb8e5f730>]}
+[0m19:14:31.945228 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '02d6489a-539b-453a-96da-1ec74295e834', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8cb5fec100>]}
+[0m19:14:31.951755 [debug] [MainThread]: checksum: 51f6b581eba8f8101bc020bf9faf8f96af641e2da86d581f66e2bdf0ff384b1c, vars: {}, profile: , target: , version: 1.5.1
+[0m19:14:31.961510 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m19:14:31.961682 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m19:14:31.964724 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '02d6489a-539b-453a-96da-1ec74295e834', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8cb5dd5510>]}
+[0m19:14:31.968587 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '02d6489a-539b-453a-96da-1ec74295e834', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8cb5da13f0>]}
+[0m19:14:31.968863 [info ] [MainThread]: Found 2 models, 4 tests, 0 snapshots, 0 analyses, 353 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics, 0 groups
+[0m19:14:31.969101 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '02d6489a-539b-453a-96da-1ec74295e834', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8cb5da14e0>]}
+[0m19:14:31.969861 [info ] [MainThread]: 
+[0m19:14:31.970278 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m19:14:31.970961 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_sunny-catwalk-388616'
+[0m19:14:31.971147 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m19:14:33.540367 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_sunny-catwalk-388616, now create_sunny-catwalk-388616_dbt_abel)
+[0m19:14:33.541781 [debug] [ThreadPool]: Creating schema "database: "sunny-catwalk-388616"
+schema: "dbt_abel"
+"
+[0m19:14:33.552551 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m19:14:33.552776 [debug] [ThreadPool]: On create_sunny-catwalk-388616_dbt_abel: /* {"app": "dbt", "dbt_version": "1.5.1", "profile_name": "ae_bootcamp", "target_name": "dev", "connection_name": "create_sunny-catwalk-388616_dbt_abel"} */
+create schema if not exists `sunny-catwalk-388616`.`dbt_abel`
+  
+[0m19:14:39.115004 [debug] [ThreadPool]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=sunny-catwalk-388616&j=bq:asia-southeast2:3c8aea27-997a-416c-86c8-b8b01f986189&page=queryresults
+[0m19:14:39.118247 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_sunny-catwalk-388616_dbt_abel, now list_sunny-catwalk-388616_dbt_abel)
+[0m19:14:39.118762 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m19:14:39.581132 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '02d6489a-539b-453a-96da-1ec74295e834', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8cb5da04c0>]}
+[0m19:14:39.581945 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m19:14:39.582669 [info ] [MainThread]: 
+[0m19:14:39.590456 [debug] [Thread-1 (]: Began running node model.ae_bootcamp.my_first_dbt_model
+[0m19:14:39.591336 [info ] [Thread-1 (]: 1 of 2 START sql table model dbt_abel.my_first_dbt_model ....................... [RUN]
+[0m19:14:39.592548 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_sunny-catwalk-388616_dbt_abel, now model.ae_bootcamp.my_first_dbt_model)
+[0m19:14:39.593094 [debug] [Thread-1 (]: Began compiling node model.ae_bootcamp.my_first_dbt_model
+[0m19:14:39.597853 [debug] [Thread-1 (]: Writing injected SQL for node "model.ae_bootcamp.my_first_dbt_model"
+[0m19:14:39.599327 [debug] [Thread-1 (]: Timing info for model.ae_bootcamp.my_first_dbt_model (compile): 19:14:39.593406 => 19:14:39.598919
+[0m19:14:39.599800 [debug] [Thread-1 (]: Began executing node model.ae_bootcamp.my_first_dbt_model
+[0m19:14:39.627051 [debug] [Thread-1 (]: Writing runtime sql for node "model.ae_bootcamp.my_first_dbt_model"
+[0m19:14:39.627549 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m19:14:39.627836 [debug] [Thread-1 (]: On model.ae_bootcamp.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.5.1", "profile_name": "ae_bootcamp", "target_name": "dev", "node_id": "model.ae_bootcamp.my_first_dbt_model"} */
+
+  
+    
+
+    create or replace table `sunny-catwalk-388616`.`dbt_abel`.`my_first_dbt_model`
+    
+    
+
+    OPTIONS()
+    as (
+      /*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+with source_data as (
+
+    select 1 as id
+    union all
+    select null as id
+
+)
+
+select *
+from source_data
+
+/*
+    Uncomment the line below to remove records with null `id` values
+*/
+
+-- where id is not null
+    );
+  
+[0m19:14:42.274660 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=sunny-catwalk-388616&j=bq:asia-southeast2:8d5daac7-798d-4be9-95bb-292435f7305c&page=queryresults
+[0m19:14:42.291822 [debug] [Thread-1 (]: Timing info for model.ae_bootcamp.my_first_dbt_model (execute): 19:14:39.600166 => 19:14:42.291705
+[0m19:14:42.292234 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '02d6489a-539b-453a-96da-1ec74295e834', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8cb5da09d0>]}
+[0m19:14:42.292566 [info ] [Thread-1 (]: 1 of 2 OK created sql table model dbt_abel.my_first_dbt_model .................. [[32mCREATE TABLE (2.0 rows, 0 processed)[0m in 2.70s]
+[0m19:14:42.292928 [debug] [Thread-1 (]: Finished running node model.ae_bootcamp.my_first_dbt_model
+[0m19:14:42.293582 [debug] [Thread-1 (]: Began running node model.ae_bootcamp.my_second_dbt_model
+[0m19:14:42.293840 [info ] [Thread-1 (]: 2 of 2 START sql view model dbt_abel.my_second_dbt_model ....................... [RUN]
+[0m19:14:42.294254 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.ae_bootcamp.my_first_dbt_model, now model.ae_bootcamp.my_second_dbt_model)
+[0m19:14:42.294452 [debug] [Thread-1 (]: Began compiling node model.ae_bootcamp.my_second_dbt_model
+[0m19:14:42.296135 [debug] [Thread-1 (]: Writing injected SQL for node "model.ae_bootcamp.my_second_dbt_model"
+[0m19:14:42.297848 [debug] [Thread-1 (]: Timing info for model.ae_bootcamp.my_second_dbt_model (compile): 19:14:42.294596 => 19:14:42.297678
+[0m19:14:42.298076 [debug] [Thread-1 (]: Began executing node model.ae_bootcamp.my_second_dbt_model
+[0m19:14:42.317402 [debug] [Thread-1 (]: Writing runtime sql for node "model.ae_bootcamp.my_second_dbt_model"
+[0m19:14:42.318318 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m19:14:42.318776 [debug] [Thread-1 (]: On model.ae_bootcamp.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.5.1", "profile_name": "ae_bootcamp", "target_name": "dev", "node_id": "model.ae_bootcamp.my_second_dbt_model"} */
+
+
+  create or replace view `sunny-catwalk-388616`.`dbt_abel`.`my_second_dbt_model`
+  OPTIONS()
+  as -- Use the `ref` function to select from other models
+
+select *
+from `sunny-catwalk-388616`.`dbt_abel`.`my_first_dbt_model`
+where id = 1;
+
+
+[0m19:14:43.470260 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=sunny-catwalk-388616&j=bq:asia-southeast2:12db2d22-2b3a-4249-bd4f-716bdef19a30&page=queryresults
+[0m19:14:43.473439 [debug] [Thread-1 (]: Timing info for model.ae_bootcamp.my_second_dbt_model (execute): 19:14:42.298207 => 19:14:43.473114
+[0m19:14:43.474489 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '02d6489a-539b-453a-96da-1ec74295e834', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8cb5c7f520>]}
+[0m19:14:43.475328 [info ] [Thread-1 (]: 2 of 2 OK created sql view model dbt_abel.my_second_dbt_model .................. [[32mCREATE VIEW (0 processed)[0m in 1.18s]
+[0m19:14:43.476409 [debug] [Thread-1 (]: Finished running node model.ae_bootcamp.my_second_dbt_model
+[0m19:14:43.486161 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m19:14:43.486432 [debug] [MainThread]: Connection 'model.ae_bootcamp.my_second_dbt_model' was properly closed.
+[0m19:14:43.486630 [info ] [MainThread]: 
+[0m19:14:43.486880 [info ] [MainThread]: Finished running 1 table model, 1 view model in 0 hours 0 minutes and 11.52 seconds (11.52s).
+[0m19:14:43.487361 [debug] [MainThread]: Command end result
+[0m19:14:43.494473 [info ] [MainThread]: 
+[0m19:14:43.502701 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m19:14:43.503308 [info ] [MainThread]: 
+[0m19:14:43.503719 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+[0m19:14:43.504677 [debug] [MainThread]: Command `dbt run` succeeded at 19:14:43.504539 after 11.75 seconds
+[0m19:14:43.505108 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8cb940a500>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8cb5fec100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8cb5da0df0>]}
+[0m19:14:43.505395 [debug] [MainThread]: Flushing usage events
+[0m19:19:28.245256 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1d6e60e560>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1d6d0aed40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1d6d0aecb0>]}
+
+
+============================== 19:19:28.246647 | 4fb16d2d-d593-42bd-9db4-97615411a379 ==============================
+[0m19:19:28.246647 [info ] [MainThread]: Running with dbt=1.5.1
+[0m19:19:28.246957 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': '/home/abelgideons/analytics-engineer-bootcamp/ae_bootcamp/logs', 'profiles_dir': '/home/abelgideons/.dbt', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m19:19:28.446127 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '4fb16d2d-d593-42bd-9db4-97615411a379', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1d6e40eec0>]}
+[0m19:19:28.453302 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '4fb16d2d-d593-42bd-9db4-97615411a379', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1d6afbb760>]}
+[0m19:19:28.459995 [debug] [MainThread]: checksum: 51f6b581eba8f8101bc020bf9faf8f96af641e2da86d581f66e2bdf0ff384b1c, vars: {}, profile: , target: , version: 1.5.1
+[0m19:19:28.471225 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m19:19:28.471428 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m19:19:28.475784 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '4fb16d2d-d593-42bd-9db4-97615411a379', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1d6ada15a0>]}
+[0m19:19:28.480268 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '4fb16d2d-d593-42bd-9db4-97615411a379', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1d6ad69480>]}
+[0m19:19:28.480508 [info ] [MainThread]: Found 2 models, 4 tests, 0 snapshots, 0 analyses, 353 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics, 0 groups
+[0m19:19:28.480747 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '4fb16d2d-d593-42bd-9db4-97615411a379', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1d6ad69570>]}
+[0m19:19:28.481198 [warn ] [MainThread]: The selection criterion 'test.sql' does not match any nodes
+[0m19:19:28.481767 [info ] [MainThread]: 
+[0m19:19:28.482012 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m19:19:28.482311 [debug] [MainThread]: Command end result
+[0m19:19:28.504344 [debug] [MainThread]: Command `dbt run` succeeded at 19:19:28.504120 after 0.26 seconds
+[0m19:19:28.504771 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1d6e60e560>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1d6afbb760>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1d6ad69030>]}
+[0m19:19:28.505094 [debug] [MainThread]: Flushing usage events
+[0m19:19:34.652679 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f54b2f6a560>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f54b1cc6d40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f54b1cc6cb0>]}
+
+
+============================== 19:19:34.654032 | ac9ba602-92c7-4627-bc80-4cca17c486b7 ==============================
+[0m19:19:34.654032 [info ] [MainThread]: Running with dbt=1.5.1
+[0m19:19:34.654339 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/home/abelgideons/analytics-engineer-bootcamp/ae_bootcamp/logs', 'debug': 'False', 'profiles_dir': '/home/abelgideons/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'log_format': 'default', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m19:19:34.839437 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'ac9ba602-92c7-4627-bc80-4cca17c486b7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f54b2f5aec0>]}
+[0m19:19:34.846465 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'ac9ba602-92c7-4627-bc80-4cca17c486b7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f54afbd7760>]}
+[0m19:19:34.852943 [debug] [MainThread]: checksum: 51f6b581eba8f8101bc020bf9faf8f96af641e2da86d581f66e2bdf0ff384b1c, vars: {}, profile: , target: , version: 1.5.1
+[0m19:19:34.862575 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m19:19:34.862746 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m19:19:34.865878 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'ac9ba602-92c7-4627-bc80-4cca17c486b7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f54af9bd5a0>]}
+[0m19:19:34.869310 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'ac9ba602-92c7-4627-bc80-4cca17c486b7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f54af989480>]}
+[0m19:19:34.869540 [info ] [MainThread]: Found 2 models, 4 tests, 0 snapshots, 0 analyses, 353 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics, 0 groups
+[0m19:19:34.869766 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ac9ba602-92c7-4627-bc80-4cca17c486b7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f54af989570>]}
+[0m19:19:34.870393 [warn ] [MainThread]: The selection criterion 'test' does not match any nodes
+[0m19:19:34.871075 [info ] [MainThread]: 
+[0m19:19:34.871514 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m19:19:34.877555 [debug] [MainThread]: Command end result
+[0m19:19:34.892984 [debug] [MainThread]: Command `dbt run` succeeded at 19:19:34.892845 after 0.24 seconds
+[0m19:19:34.893283 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f54b2f6a560>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f54afbd7760>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f54af989030>]}
+[0m19:19:34.893516 [debug] [MainThread]: Flushing usage events
+[0m19:28:59.116109 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f79560b6530>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7954dc6c20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7954dc6c80>]}
+
+
+============================== 19:28:59.117993 | d7b80730-f559-415a-b79f-a8dce8801c76 ==============================
+[0m19:28:59.117993 [info ] [MainThread]: Running with dbt=1.5.1
+[0m19:28:59.118583 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/home/abelgideons/analytics-engineer-bootcamp/ae_bootcamp/logs', 'debug': 'False', 'profiles_dir': '/home/abelgideons/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m19:28:59.357647 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'd7b80730-f559-415a-b79f-a8dce8801c76', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7955b44400>]}
+[0m19:28:59.365662 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'd7b80730-f559-415a-b79f-a8dce8801c76', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7952cd45b0>]}
+[0m19:28:59.375477 [debug] [MainThread]: checksum: 51f6b581eba8f8101bc020bf9faf8f96af641e2da86d581f66e2bdf0ff384b1c, vars: {}, profile: , target: , version: 1.5.1
+[0m19:28:59.392481 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 0 files changed.
+[0m19:28:59.392948 [debug] [MainThread]: Partial parsing: added file: ae_bootcamp://models/example/stg_customer.sql
+[0m19:28:59.412027 [debug] [MainThread]: 1699: static parser successfully parsed example/stg_customer.sql
+[0m19:28:59.420500 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.ae_bootcamp.stg_customer' (models/example/stg_customer.sql) depends on a source named 'northwind.customer' which was not found
+[0m19:28:59.421101 [debug] [MainThread]: Command `dbt run` failed at 19:28:59.420994 after 0.31 seconds
+[0m19:28:59.421471 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f79560b6530>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7952a9a710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7952ab8340>]}
+[0m19:28:59.421784 [debug] [MainThread]: Flushing usage events
+[0m19:30:31.079801 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff21fd6a530>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff21eddec20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff21eddec80>]}
+
+
+============================== 19:30:31.081171 | d66b30ed-ed77-49b1-90d1-6d2b34bda05a ==============================
+[0m19:30:31.081171 [info ] [MainThread]: Running with dbt=1.5.1
+[0m19:30:31.081486 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/abelgideons/.dbt', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/home/abelgideons/analytics-engineer-bootcamp/ae_bootcamp/logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m19:30:31.296494 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'd66b30ed-ed77-49b1-90d1-6d2b34bda05a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff21f824400>]}
+[0m19:30:31.303982 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'd66b30ed-ed77-49b1-90d1-6d2b34bda05a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff21c9ec5b0>]}
+[0m19:30:31.311015 [debug] [MainThread]: checksum: 51f6b581eba8f8101bc020bf9faf8f96af641e2da86d581f66e2bdf0ff384b1c, vars: {}, profile: , target: , version: 1.5.1
+[0m19:30:31.321844 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 0 files changed.
+[0m19:30:31.322123 [debug] [MainThread]: Partial parsing: added file: ae_bootcamp://models/example/stg_customer.sql
+[0m19:30:31.334796 [debug] [MainThread]: 1699: static parser successfully parsed example/stg_customer.sql
+[0m19:30:31.341982 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.ae_bootcamp.stg_customer' (models/example/stg_customer.sql) depends on a source named 'northwind.customer' which was not found
+[0m19:30:31.342510 [debug] [MainThread]: Command `dbt run` failed at 19:30:31.342389 after 0.27 seconds
+[0m19:30:31.342745 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff21fd6a530>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff21c7b2710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff21c7d0340>]}
+[0m19:30:31.342979 [debug] [MainThread]: Flushing usage events
+[0m19:33:18.823436 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f99134ee530>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9911faacb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9911faac20>]}
+
+
+============================== 19:33:18.824794 | cfd7c67d-fefd-4a82-ad76-6e2249431fa9 ==============================
+[0m19:33:18.824794 [info ] [MainThread]: Running with dbt=1.5.1
+[0m19:33:18.825486 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': '/home/abelgideons/.dbt', 'log_path': '/home/abelgideons/analytics-engineer-bootcamp/ae_bootcamp/logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m19:33:19.022421 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'cfd7c67d-fefd-4a82-ad76-6e2249431fa9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9912d28400>]}
+[0m19:33:19.029811 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'cfd7c67d-fefd-4a82-ad76-6e2249431fa9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f990feb85b0>]}
+[0m19:33:19.036211 [debug] [MainThread]: checksum: 51f6b581eba8f8101bc020bf9faf8f96af641e2da86d581f66e2bdf0ff384b1c, vars: {}, profile: , target: , version: 1.5.1
+[0m19:33:19.046876 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 2 files added, 0 files changed.
+[0m19:33:19.047134 [debug] [MainThread]: Partial parsing: added file: ae_bootcamp://models/example/stg_customer.sql
+[0m19:33:19.047347 [debug] [MainThread]: Partial parsing: added file: ae_bootcamp://models/staging/source.yml
+[0m19:33:19.059418 [debug] [MainThread]: 1699: static parser successfully parsed example/stg_customer.sql
+[0m19:33:19.085440 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'cfd7c67d-fefd-4a82-ad76-6e2249431fa9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f990db540d0>]}
+[0m19:33:19.089947 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'cfd7c67d-fefd-4a82-ad76-6e2249431fa9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f990fc43e80>]}
+[0m19:33:19.090213 [info ] [MainThread]: Found 3 models, 4 tests, 0 snapshots, 0 analyses, 353 macros, 0 operations, 0 seed files, 19 sources, 0 exposures, 0 metrics, 0 groups
+[0m19:33:19.090455 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'cfd7c67d-fefd-4a82-ad76-6e2249431fa9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f990fc43f10>]}
+[0m19:33:19.092671 [info ] [MainThread]: 
+[0m19:33:19.094086 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m19:33:19.095493 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_sunny-catwalk-388616'
+[0m19:33:19.102543 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m19:33:27.421463 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_sunny-catwalk-388616, now create_sunny-catwalk-388616_dbt_abel)
+[0m19:33:27.422964 [debug] [ThreadPool]: Creating schema "database: "sunny-catwalk-388616"
+schema: "dbt_abel"
+"
+[0m19:33:27.433893 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m19:33:27.434137 [debug] [ThreadPool]: On create_sunny-catwalk-388616_dbt_abel: /* {"app": "dbt", "dbt_version": "1.5.1", "profile_name": "ae_bootcamp", "target_name": "dev", "connection_name": "create_sunny-catwalk-388616_dbt_abel"} */
+create schema if not exists `sunny-catwalk-388616`.`dbt_abel`
+  
+[0m19:33:32.930392 [debug] [ThreadPool]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=sunny-catwalk-388616&j=bq:asia-southeast2:c6b11c7c-42d4-420c-b96b-8d8ac7df140d&page=queryresults
+[0m19:33:32.934205 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_sunny-catwalk-388616_dbt_abel, now list_sunny-catwalk-388616_dbt_abel)
+[0m19:33:32.934687 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m19:33:33.254854 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'cfd7c67d-fefd-4a82-ad76-6e2249431fa9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f990fc689a0>]}
+[0m19:33:33.256107 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m19:33:33.256725 [info ] [MainThread]: 
+[0m19:33:33.264088 [debug] [Thread-1 (]: Began running node model.ae_bootcamp.my_first_dbt_model
+[0m19:33:33.264624 [info ] [Thread-1 (]: 1 of 3 START sql table model dbt_abel.my_first_dbt_model ....................... [RUN]
+[0m19:33:33.265300 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_sunny-catwalk-388616_dbt_abel, now model.ae_bootcamp.my_first_dbt_model)
+[0m19:33:33.265604 [debug] [Thread-1 (]: Began compiling node model.ae_bootcamp.my_first_dbt_model
+[0m19:33:33.267782 [debug] [Thread-1 (]: Writing injected SQL for node "model.ae_bootcamp.my_first_dbt_model"
+[0m19:33:33.268278 [debug] [Thread-1 (]: Timing info for model.ae_bootcamp.my_first_dbt_model (compile): 19:33:33.265779 => 19:33:33.268061
+[0m19:33:33.268505 [debug] [Thread-1 (]: Began executing node model.ae_bootcamp.my_first_dbt_model
+[0m19:33:33.299204 [debug] [Thread-1 (]: Writing runtime sql for node "model.ae_bootcamp.my_first_dbt_model"
+[0m19:33:33.299992 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m19:33:33.300390 [debug] [Thread-1 (]: On model.ae_bootcamp.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.5.1", "profile_name": "ae_bootcamp", "target_name": "dev", "node_id": "model.ae_bootcamp.my_first_dbt_model"} */
+
+  
+    
+
+    create or replace table `sunny-catwalk-388616`.`dbt_abel`.`my_first_dbt_model`
+    
+    
+
+    OPTIONS()
+    as (
+      /*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+with source_data as (
+
+    select 1 as id
+    union all
+    select null as id
+
+)
+
+select *
+from source_data
+
+/*
+    Uncomment the line below to remove records with null `id` values
+*/
+
+-- where id is not null
+    );
+  
+[0m19:33:37.041679 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=sunny-catwalk-388616&j=bq:asia-southeast2:79f864b2-64e7-442c-85e7-776f275ed7a9&page=queryresults
+[0m19:33:37.062623 [debug] [Thread-1 (]: Timing info for model.ae_bootcamp.my_first_dbt_model (execute): 19:33:33.268626 => 19:33:37.062466
+[0m19:33:37.063163 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'cfd7c67d-fefd-4a82-ad76-6e2249431fa9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f990dbabe20>]}
+[0m19:33:37.063597 [info ] [Thread-1 (]: 1 of 3 OK created sql table model dbt_abel.my_first_dbt_model .................. [[32mCREATE TABLE (2.0 rows, 0 processed)[0m in 3.80s]
+[0m19:33:37.064048 [debug] [Thread-1 (]: Finished running node model.ae_bootcamp.my_first_dbt_model
+[0m19:33:37.064329 [debug] [Thread-1 (]: Began running node model.ae_bootcamp.stg_customer
+[0m19:33:37.064656 [info ] [Thread-1 (]: 2 of 3 START sql view model dbt_abel.stg_customer .............................. [RUN]
+[0m19:33:37.065309 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.ae_bootcamp.my_first_dbt_model, now model.ae_bootcamp.stg_customer)
+[0m19:33:37.065599 [debug] [Thread-1 (]: Began compiling node model.ae_bootcamp.stg_customer
+[0m19:33:37.067295 [debug] [Thread-1 (]: Writing injected SQL for node "model.ae_bootcamp.stg_customer"
+[0m19:33:37.077295 [debug] [Thread-1 (]: Timing info for model.ae_bootcamp.stg_customer (compile): 19:33:37.065733 => 19:33:37.076476
+[0m19:33:37.077953 [debug] [Thread-1 (]: Began executing node model.ae_bootcamp.stg_customer
+[0m19:33:37.098370 [debug] [Thread-1 (]: Writing runtime sql for node "model.ae_bootcamp.stg_customer"
+[0m19:33:37.099221 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m19:33:37.099612 [debug] [Thread-1 (]: On model.ae_bootcamp.stg_customer: /* {"app": "dbt", "dbt_version": "1.5.1", "profile_name": "ae_bootcamp", "target_name": "dev", "node_id": "model.ae_bootcamp.stg_customer"} */
+
+
+  create or replace view `sunny-catwalk-388616`.`dbt_abel`.`stg_customer`
+  OPTIONS()
+  as with source as 
+(
+    select * from `sunny-catwalk-388616`.`dl_northwind`.`customer`
+)
+select * from source;;
+
+
+[0m19:33:37.962737 [debug] [Thread-1 (]: BigQuery adapter: Retry attempt 1 of 1 after error: BadRequest('Syntax error: Expected end of input but got ";" at [10:22]')
+[0m19:33:38.270598 [error] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=sunny-catwalk-388616&j=bq:asia-southeast2:32552b98-328f-468b-aef4-d887d2afb764&page=queryresults
+[0m19:33:38.271303 [debug] [Thread-1 (]: Timing info for model.ae_bootcamp.stg_customer (execute): 19:33:37.078195 => 19:33:38.271049
+[0m19:33:38.273299 [debug] [Thread-1 (]: Database Error in model stg_customer (models/example/stg_customer.sql)
+  Syntax error: Expected end of input but got ";" at [10:22]
+  compiled Code at target/run/ae_bootcamp/models/example/stg_customer.sql
+[0m19:33:38.273620 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'cfd7c67d-fefd-4a82-ad76-6e2249431fa9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f990d9fda20>]}
+[0m19:33:38.274032 [error] [Thread-1 (]: 2 of 3 ERROR creating sql view model dbt_abel.stg_customer ..................... [[31mERROR[0m in 1.21s]
+[0m19:33:38.274399 [debug] [Thread-1 (]: Finished running node model.ae_bootcamp.stg_customer
+[0m19:33:38.274690 [debug] [Thread-1 (]: Began running node model.ae_bootcamp.my_second_dbt_model
+[0m19:33:38.274995 [info ] [Thread-1 (]: 3 of 3 START sql view model dbt_abel.my_second_dbt_model ....................... [RUN]
+[0m19:33:38.275491 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.ae_bootcamp.stg_customer, now model.ae_bootcamp.my_second_dbt_model)
+[0m19:33:38.275734 [debug] [Thread-1 (]: Began compiling node model.ae_bootcamp.my_second_dbt_model
+[0m19:33:38.278979 [debug] [Thread-1 (]: Writing injected SQL for node "model.ae_bootcamp.my_second_dbt_model"
+[0m19:33:38.284140 [debug] [Thread-1 (]: Timing info for model.ae_bootcamp.my_second_dbt_model (compile): 19:33:38.275905 => 19:33:38.283845
+[0m19:33:38.284570 [debug] [Thread-1 (]: Began executing node model.ae_bootcamp.my_second_dbt_model
+[0m19:33:38.286837 [debug] [Thread-1 (]: Writing runtime sql for node "model.ae_bootcamp.my_second_dbt_model"
+[0m19:33:38.287620 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m19:33:38.287901 [debug] [Thread-1 (]: On model.ae_bootcamp.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.5.1", "profile_name": "ae_bootcamp", "target_name": "dev", "node_id": "model.ae_bootcamp.my_second_dbt_model"} */
+
+
+  create or replace view `sunny-catwalk-388616`.`dbt_abel`.`my_second_dbt_model`
+  OPTIONS()
+  as -- Use the `ref` function to select from other models
+
+select *
+from `sunny-catwalk-388616`.`dbt_abel`.`my_first_dbt_model`
+where id = 1;
+
+
+[0m19:33:39.603499 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=sunny-catwalk-388616&j=bq:asia-southeast2:24f365a8-1fb8-4a85-88b2-345dfbe7c95d&page=queryresults
+[0m19:33:39.606450 [debug] [Thread-1 (]: Timing info for model.ae_bootcamp.my_second_dbt_model (execute): 19:33:38.284750 => 19:33:39.606140
+[0m19:33:39.607435 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'cfd7c67d-fefd-4a82-ad76-6e2249431fa9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f990db90310>]}
+[0m19:33:39.608284 [info ] [Thread-1 (]: 3 of 3 OK created sql view model dbt_abel.my_second_dbt_model .................. [[32mCREATE VIEW (0 processed)[0m in 1.33s]
+[0m19:33:39.609321 [debug] [Thread-1 (]: Finished running node model.ae_bootcamp.my_second_dbt_model
+[0m19:33:39.619225 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m19:33:39.619447 [debug] [MainThread]: Connection 'model.ae_bootcamp.my_second_dbt_model' was properly closed.
+[0m19:33:39.619625 [info ] [MainThread]: 
+[0m19:33:39.619848 [info ] [MainThread]: Finished running 1 table model, 2 view models in 0 hours 0 minutes and 20.53 seconds (20.53s).
+[0m19:33:39.620274 [debug] [MainThread]: Command end result
+[0m19:33:39.633710 [info ] [MainThread]: 
+[0m19:33:39.634161 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m19:33:39.634372 [info ] [MainThread]: 
+[0m19:33:39.634554 [error] [MainThread]: [33mDatabase Error in model stg_customer (models/example/stg_customer.sql)[0m
+[0m19:33:39.634717 [error] [MainThread]:   Syntax error: Expected end of input but got ";" at [10:22]
+[0m19:33:39.634869 [error] [MainThread]:   compiled Code at target/run/ae_bootcamp/models/example/stg_customer.sql
+[0m19:33:39.635018 [info ] [MainThread]: 
+[0m19:33:39.635185 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=1 SKIP=0 TOTAL=3
+[0m19:33:39.635534 [debug] [MainThread]: Command `dbt run` failed at 19:33:39.635461 after 20.82 seconds
+[0m19:33:39.635752 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f99134ee530>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f990feb85b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f990fc43460>]}
+[0m19:33:39.635963 [debug] [MainThread]: Flushing usage events
+[0m19:35:14.639174 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fda65e0a500>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fda648aec80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fda648aebf0>]}
+
+
+============================== 19:35:14.640530 | 519e266c-7df2-4467-b886-ea23c61d9694 ==============================
+[0m19:35:14.640530 [info ] [MainThread]: Running with dbt=1.5.1
+[0m19:35:14.640841 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': '/home/abelgideons/.dbt', 'log_path': '/home/abelgideons/analytics-engineer-bootcamp/ae_bootcamp/logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m19:35:14.883018 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '519e266c-7df2-4467-b886-ea23c61d9694', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fda6562f730>]}
+[0m19:35:14.892313 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '519e266c-7df2-4467-b886-ea23c61d9694', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fda627b8100>]}
+[0m19:35:14.902392 [debug] [MainThread]: checksum: 51f6b581eba8f8101bc020bf9faf8f96af641e2da86d581f66e2bdf0ff384b1c, vars: {}, profile: , target: , version: 1.5.1
+[0m19:35:14.920037 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m19:35:14.921575 [debug] [MainThread]: Partial parsing: updated file: ae_bootcamp://models/example/stg_customer.sql
+[0m19:35:14.940171 [debug] [MainThread]: 1699: static parser successfully parsed example/stg_customer.sql
+[0m19:35:14.957795 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '519e266c-7df2-4467-b886-ea23c61d9694', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fda625cf760>]}
+[0m19:35:14.963359 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '519e266c-7df2-4467-b886-ea23c61d9694', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fda625ce3b0>]}
+[0m19:35:14.963820 [info ] [MainThread]: Found 3 models, 4 tests, 0 snapshots, 0 analyses, 353 macros, 0 operations, 0 seed files, 19 sources, 0 exposures, 0 metrics, 0 groups
+[0m19:35:14.964168 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '519e266c-7df2-4467-b886-ea23c61d9694', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fda625cefe0>]}
+[0m19:35:14.965703 [info ] [MainThread]: 
+[0m19:35:14.966459 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m19:35:14.968297 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_sunny-catwalk-388616'
+[0m19:35:14.968822 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m19:35:16.475431 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_sunny-catwalk-388616, now create_sunny-catwalk-388616_dbt_abel)
+[0m19:35:16.476728 [debug] [ThreadPool]: Creating schema "database: "sunny-catwalk-388616"
+schema: "dbt_abel"
+"
+[0m19:35:16.487947 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m19:35:16.488187 [debug] [ThreadPool]: On create_sunny-catwalk-388616_dbt_abel: /* {"app": "dbt", "dbt_version": "1.5.1", "profile_name": "ae_bootcamp", "target_name": "dev", "connection_name": "create_sunny-catwalk-388616_dbt_abel"} */
+create schema if not exists `sunny-catwalk-388616`.`dbt_abel`
+  
+[0m19:35:21.388739 [debug] [ThreadPool]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=sunny-catwalk-388616&j=bq:asia-southeast2:6f8ee8a4-a1d3-4c0f-aa5a-8b918dc952dd&page=queryresults
+[0m19:35:21.392292 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_sunny-catwalk-388616_dbt_abel, now list_sunny-catwalk-388616_dbt_abel)
+[0m19:35:21.421230 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m19:35:22.103609 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '519e266c-7df2-4467-b886-ea23c61d9694', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fda625ccd30>]}
+[0m19:35:22.105057 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m19:35:22.105761 [info ] [MainThread]: 
+[0m19:35:22.112553 [debug] [Thread-1 (]: Began running node model.ae_bootcamp.my_first_dbt_model
+[0m19:35:22.113189 [info ] [Thread-1 (]: 1 of 3 START sql table model dbt_abel.my_first_dbt_model ....................... [RUN]
+[0m19:35:22.113965 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_sunny-catwalk-388616_dbt_abel, now model.ae_bootcamp.my_first_dbt_model)
+[0m19:35:22.114311 [debug] [Thread-1 (]: Began compiling node model.ae_bootcamp.my_first_dbt_model
+[0m19:35:22.116777 [debug] [Thread-1 (]: Writing injected SQL for node "model.ae_bootcamp.my_first_dbt_model"
+[0m19:35:22.140434 [debug] [Thread-1 (]: Timing info for model.ae_bootcamp.my_first_dbt_model (compile): 19:35:22.114510 => 19:35:22.140069
+[0m19:35:22.140810 [debug] [Thread-1 (]: Began executing node model.ae_bootcamp.my_first_dbt_model
+[0m19:35:22.164342 [debug] [Thread-1 (]: Writing runtime sql for node "model.ae_bootcamp.my_first_dbt_model"
+[0m19:35:22.165220 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m19:35:22.165860 [debug] [Thread-1 (]: On model.ae_bootcamp.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.5.1", "profile_name": "ae_bootcamp", "target_name": "dev", "node_id": "model.ae_bootcamp.my_first_dbt_model"} */
+
+  
+    
+
+    create or replace table `sunny-catwalk-388616`.`dbt_abel`.`my_first_dbt_model`
+    
+    
+
+    OPTIONS()
+    as (
+      /*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+with source_data as (
+
+    select 1 as id
+    union all
+    select null as id
+
+)
+
+select *
+from source_data
+
+/*
+    Uncomment the line below to remove records with null `id` values
+*/
+
+-- where id is not null
+    );
+  
+[0m19:35:26.197614 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=sunny-catwalk-388616&j=bq:asia-southeast2:0f7d5372-fb55-4584-8ee5-d50803201bb8&page=queryresults
+[0m19:35:26.218077 [debug] [Thread-1 (]: Timing info for model.ae_bootcamp.my_first_dbt_model (execute): 19:35:22.140961 => 19:35:26.217943
+[0m19:35:26.218555 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '519e266c-7df2-4467-b886-ea23c61d9694', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fda627ce0b0>]}
+[0m19:35:26.218935 [info ] [Thread-1 (]: 1 of 3 OK created sql table model dbt_abel.my_first_dbt_model .................. [[32mCREATE TABLE (2.0 rows, 0 processed)[0m in 4.10s]
+[0m19:35:26.219549 [debug] [Thread-1 (]: Finished running node model.ae_bootcamp.my_first_dbt_model
+[0m19:35:26.219797 [debug] [Thread-1 (]: Began running node model.ae_bootcamp.stg_customer
+[0m19:35:26.220046 [info ] [Thread-1 (]: 2 of 3 START sql view model dbt_abel.stg_customer .............................. [RUN]
+[0m19:35:26.220392 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.ae_bootcamp.my_first_dbt_model, now model.ae_bootcamp.stg_customer)
+[0m19:35:26.220568 [debug] [Thread-1 (]: Began compiling node model.ae_bootcamp.stg_customer
+[0m19:35:26.222064 [debug] [Thread-1 (]: Writing injected SQL for node "model.ae_bootcamp.stg_customer"
+[0m19:35:26.222695 [debug] [Thread-1 (]: Timing info for model.ae_bootcamp.stg_customer (compile): 19:35:26.220673 => 19:35:26.222558
+[0m19:35:26.222897 [debug] [Thread-1 (]: Began executing node model.ae_bootcamp.stg_customer
+[0m19:35:26.234777 [debug] [Thread-1 (]: Writing runtime sql for node "model.ae_bootcamp.stg_customer"
+[0m19:35:26.235252 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m19:35:26.235485 [debug] [Thread-1 (]: On model.ae_bootcamp.stg_customer: /* {"app": "dbt", "dbt_version": "1.5.1", "profile_name": "ae_bootcamp", "target_name": "dev", "node_id": "model.ae_bootcamp.stg_customer"} */
+
+
+  create or replace view `sunny-catwalk-388616`.`dbt_abel`.`stg_customer`
+  OPTIONS()
+  as with source as 
+(
+    select * from `sunny-catwalk-388616`.`dl_northwind`.`customer`
+)
+select * from source;
+
+
+[0m19:35:28.457807 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=sunny-catwalk-388616&j=bq:asia-southeast2:fdac25a5-a401-48c9-b4ad-e270f82ecaf8&page=queryresults
+[0m19:35:28.461271 [debug] [Thread-1 (]: Timing info for model.ae_bootcamp.stg_customer (execute): 19:35:26.223014 => 19:35:28.460938
+[0m19:35:28.463158 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '519e266c-7df2-4467-b886-ea23c61d9694', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fda625cf850>]}
+[0m19:35:28.464260 [info ] [Thread-1 (]: 2 of 3 OK created sql view model dbt_abel.stg_customer ......................... [[32mCREATE VIEW (0 processed)[0m in 2.24s]
+[0m19:35:28.465333 [debug] [Thread-1 (]: Finished running node model.ae_bootcamp.stg_customer
+[0m19:35:28.466113 [debug] [Thread-1 (]: Began running node model.ae_bootcamp.my_second_dbt_model
+[0m19:35:28.466583 [info ] [Thread-1 (]: 3 of 3 START sql view model dbt_abel.my_second_dbt_model ....................... [RUN]
+[0m19:35:28.467243 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.ae_bootcamp.stg_customer, now model.ae_bootcamp.my_second_dbt_model)
+[0m19:35:28.467594 [debug] [Thread-1 (]: Began compiling node model.ae_bootcamp.my_second_dbt_model
+[0m19:35:28.471198 [debug] [Thread-1 (]: Writing injected SQL for node "model.ae_bootcamp.my_second_dbt_model"
+[0m19:35:28.471633 [debug] [Thread-1 (]: Timing info for model.ae_bootcamp.my_second_dbt_model (compile): 19:35:28.467786 => 19:35:28.471492
+[0m19:35:28.471815 [debug] [Thread-1 (]: Began executing node model.ae_bootcamp.my_second_dbt_model
+[0m19:35:28.473364 [debug] [Thread-1 (]: Writing runtime sql for node "model.ae_bootcamp.my_second_dbt_model"
+[0m19:35:28.473646 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m19:35:28.473849 [debug] [Thread-1 (]: On model.ae_bootcamp.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.5.1", "profile_name": "ae_bootcamp", "target_name": "dev", "node_id": "model.ae_bootcamp.my_second_dbt_model"} */
+
+
+  create or replace view `sunny-catwalk-388616`.`dbt_abel`.`my_second_dbt_model`
+  OPTIONS()
+  as -- Use the `ref` function to select from other models
+
+select *
+from `sunny-catwalk-388616`.`dbt_abel`.`my_first_dbt_model`
+where id = 1;
+
+
+[0m19:35:31.629597 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=sunny-catwalk-388616&j=bq:asia-southeast2:2981dbdb-bd7e-4c4f-afda-d7e69c3ad65c&page=queryresults
+[0m19:35:31.632623 [debug] [Thread-1 (]: Timing info for model.ae_bootcamp.my_second_dbt_model (execute): 19:35:28.471923 => 19:35:31.632334
+[0m19:35:31.633557 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '519e266c-7df2-4467-b886-ea23c61d9694', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fda6256b070>]}
+[0m19:35:31.634685 [info ] [Thread-1 (]: 3 of 3 OK created sql view model dbt_abel.my_second_dbt_model .................. [[32mCREATE VIEW (0 processed)[0m in 3.17s]
+[0m19:35:31.635611 [debug] [Thread-1 (]: Finished running node model.ae_bootcamp.my_second_dbt_model
+[0m19:35:31.638666 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m19:35:31.638968 [debug] [MainThread]: Connection 'model.ae_bootcamp.my_second_dbt_model' was properly closed.
+[0m19:35:31.639247 [info ] [MainThread]: 
+[0m19:35:31.639590 [info ] [MainThread]: Finished running 1 table model, 2 view models in 0 hours 0 minutes and 16.67 seconds (16.67s).
+[0m19:35:31.640304 [debug] [MainThread]: Command end result
+[0m19:35:31.646157 [info ] [MainThread]: 
+[0m19:35:31.646413 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m19:35:31.646590 [info ] [MainThread]: 
+[0m19:35:31.646763 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 TOTAL=3
+[0m19:35:31.647103 [debug] [MainThread]: Command `dbt run` succeeded at 19:35:31.647040 after 17.01 seconds
+[0m19:35:31.647284 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fda65e0a500>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fda627b8100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fda604f0580>]}
+[0m19:35:31.647466 [debug] [MainThread]: Flushing usage events
