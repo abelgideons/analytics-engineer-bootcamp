@@ -5,7 +5,7 @@ sources:
     tables: 
       - name: customer
       - name: employee_privileges
-      - name: employees
+      - name: employee
       - name: inventory_transaction_types
       - name: inventory_transactions
       - name: invoices

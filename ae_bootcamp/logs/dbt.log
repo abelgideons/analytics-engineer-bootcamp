@@ -1137,3 +1137,711 @@ where id = 1;
 [0m19:35:31.647103 [debug] [MainThread]: Command `dbt run` succeeded at 19:35:31.647040 after 17.01 seconds
 [0m19:35:31.647284 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fda65e0a500>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fda627b8100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fda604f0580>]}
 [0m19:35:31.647466 [debug] [MainThread]: Flushing usage events
+[0m17:56:29.214767 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbcf6be6500>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbcf58c6bf0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbcf58c6c50>]}
+
+
+============================== 17:56:29.217979 | 0e677f70-4a5d-4af2-9134-ba13327e0b1c ==============================
+[0m17:56:29.217979 [info ] [MainThread]: Running with dbt=1.5.1
+[0m17:56:29.218444 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': '/home/abelgideons/analytics-engineer-bootcamp/ae_bootcamp/logs', 'fail_fast': 'False', 'profiles_dir': '/home/abelgideons/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m17:56:29.406291 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '0e677f70-4a5d-4af2-9134-ba13327e0b1c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbcf6647730>]}
+[0m17:56:29.413859 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '0e677f70-4a5d-4af2-9134-ba13327e0b1c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbcf37d4100>]}
+[0m17:56:29.420571 [debug] [MainThread]: checksum: 51f6b581eba8f8101bc020bf9faf8f96af641e2da86d581f66e2bdf0ff384b1c, vars: {}, profile: , target: , version: 1.5.1
+[0m17:56:29.456151 [debug] [MainThread]: Partial parsing enabled: 4 files deleted, 19 files added, 0 files changed.
+[0m17:56:29.456498 [debug] [MainThread]: Partial parsing: added file: ae_bootcamp://models/staging/stg_inventory_transaction_types.sql
+[0m17:56:29.456836 [debug] [MainThread]: Partial parsing: added file: ae_bootcamp://models/staging/stg_customer.sql
+[0m17:56:29.457052 [debug] [MainThread]: Partial parsing: added file: ae_bootcamp://models/staging/stg_employee_privileges.sql
+[0m17:56:29.457237 [debug] [MainThread]: Partial parsing: added file: ae_bootcamp://models/staging/stg_orders.sql
+[0m17:56:29.457409 [debug] [MainThread]: Partial parsing: added file: ae_bootcamp://models/staging/stg_purchase_order_status.sql
+[0m17:56:29.457746 [debug] [MainThread]: Partial parsing: added file: ae_bootcamp://models/staging/stg_purchase_orders.sql
+[0m17:56:29.457933 [debug] [MainThread]: Partial parsing: added file: ae_bootcamp://models/staging/stg_purchase_order_details.sql
+[0m17:56:29.458131 [debug] [MainThread]: Partial parsing: added file: ae_bootcamp://models/staging/stg_orders_status.sql
+[0m17:56:29.458315 [debug] [MainThread]: Partial parsing: added file: ae_bootcamp://models/staging/stg_order_details.sql
+[0m17:56:29.458481 [debug] [MainThread]: Partial parsing: added file: ae_bootcamp://models/staging/stg_order_details_status.sql
+[0m17:56:29.458650 [debug] [MainThread]: Partial parsing: added file: ae_bootcamp://models/staging/stg_privileges.sql
+[0m17:56:29.458810 [debug] [MainThread]: Partial parsing: added file: ae_bootcamp://models/staging/stg_suppliers.sql
+[0m17:56:29.458972 [debug] [MainThread]: Partial parsing: added file: ae_bootcamp://models/staging/stg_inventory_transactions.sql
+[0m17:56:29.459135 [debug] [MainThread]: Partial parsing: added file: ae_bootcamp://models/staging/stg_products.sql
+[0m17:56:29.459294 [debug] [MainThread]: Partial parsing: added file: ae_bootcamp://models/staging/stg_shippers.sql
+[0m17:56:29.459461 [debug] [MainThread]: Partial parsing: added file: ae_bootcamp://models/staging/stg_strings.sql
+[0m17:56:29.459621 [debug] [MainThread]: Partial parsing: added file: ae_bootcamp://models/staging/stg_orders_tax_status.sql
+[0m17:56:29.459790 [debug] [MainThread]: Partial parsing: added file: ae_bootcamp://models/staging/stg_invoices.sql
+[0m17:56:29.459953 [debug] [MainThread]: Partial parsing: added file: ae_bootcamp://models/staging/stg_employees.sql
+[0m17:56:29.460150 [debug] [MainThread]: Partial parsing: deleted file: ae_bootcamp://models/example/my_second_dbt_model.sql
+[0m17:56:29.460318 [debug] [MainThread]: Partial parsing: deleted file: ae_bootcamp://models/example/stg_customer.sql
+[0m17:56:29.460467 [debug] [MainThread]: Partial parsing: deleted file: ae_bootcamp://models/example/my_first_dbt_model.sql
+[0m17:56:29.473592 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_inventory_transaction_types.sql
+[0m17:56:29.481791 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_customer.sql
+[0m17:56:29.483809 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_employee_privileges.sql
+[0m17:56:29.485870 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_orders.sql
+[0m17:56:29.487920 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_purchase_order_status.sql
+[0m17:56:29.489940 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_purchase_orders.sql
+[0m17:56:29.491863 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_purchase_order_details.sql
+[0m17:56:29.493890 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_orders_status.sql
+[0m17:56:29.495858 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_order_details.sql
+[0m17:56:29.497759 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_order_details_status.sql
+[0m17:56:29.499754 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_privileges.sql
+[0m17:56:29.501638 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_suppliers.sql
+[0m17:56:29.503569 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_inventory_transactions.sql
+[0m17:56:29.506265 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_products.sql
+[0m17:56:29.508329 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_shippers.sql
+[0m17:56:29.510237 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_strings.sql
+[0m17:56:29.512253 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_orders_tax_status.sql
+[0m17:56:29.514195 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_invoices.sql
+[0m17:56:29.516210 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_employees.sql
+[0m17:56:29.523389 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.ae_bootcamp.example
+[0m17:56:29.527063 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '0e677f70-4a5d-4af2-9134-ba13327e0b1c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbcf163cf10>]}
+[0m17:56:29.538280 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '0e677f70-4a5d-4af2-9134-ba13327e0b1c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbcf359d300>]}
+[0m17:56:29.539005 [info ] [MainThread]: Found 19 models, 0 tests, 0 snapshots, 0 analyses, 353 macros, 0 operations, 0 seed files, 19 sources, 0 exposures, 0 metrics, 0 groups
+[0m17:56:29.539329 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '0e677f70-4a5d-4af2-9134-ba13327e0b1c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbcf359d3c0>]}
+[0m17:56:29.541722 [info ] [MainThread]: 
+[0m17:56:29.542451 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m17:56:29.544003 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_sunny-catwalk-388616'
+[0m17:56:29.544476 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:56:31.940744 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_sunny-catwalk-388616, now list_sunny-catwalk-388616_dbt_abel)
+[0m17:56:31.941749 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m17:56:32.165627 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '0e677f70-4a5d-4af2-9134-ba13327e0b1c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbcf35db0a0>]}
+[0m17:56:32.167122 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m17:56:32.167860 [info ] [MainThread]: 
+[0m17:56:32.200034 [debug] [Thread-1 (]: Began running node model.ae_bootcamp.stg_customer
+[0m17:56:32.200525 [info ] [Thread-1 (]: 1 of 19 START sql view model dbt_abel.stg_customer ............................. [RUN]
+[0m17:56:32.201046 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_sunny-catwalk-388616_dbt_abel, now model.ae_bootcamp.stg_customer)
+[0m17:56:32.201300 [debug] [Thread-1 (]: Began compiling node model.ae_bootcamp.stg_customer
+[0m17:56:32.203148 [debug] [Thread-1 (]: Writing injected SQL for node "model.ae_bootcamp.stg_customer"
+[0m17:56:32.203931 [debug] [Thread-1 (]: Timing info for model.ae_bootcamp.stg_customer (compile): 17:56:32.201442 => 17:56:32.203772
+[0m17:56:32.204170 [debug] [Thread-1 (]: Began executing node model.ae_bootcamp.stg_customer
+[0m17:56:32.224835 [debug] [Thread-1 (]: Writing runtime sql for node "model.ae_bootcamp.stg_customer"
+[0m17:56:32.227455 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m17:56:32.228308 [debug] [Thread-1 (]: On model.ae_bootcamp.stg_customer: /* {"app": "dbt", "dbt_version": "1.5.1", "profile_name": "ae_bootcamp", "target_name": "dev", "node_id": "model.ae_bootcamp.stg_customer"} */
+
+
+  create or replace view `sunny-catwalk-388616`.`dbt_abel`.`stg_customer`
+  OPTIONS()
+  as with source as 
+(
+    select * from `sunny-catwalk-388616`.`dl_northwind`.`customer`
+)
+select * from source;
+
+
+[0m17:56:34.161719 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=sunny-catwalk-388616&j=bq:asia-southeast2:cd66669b-2bb3-426f-965d-64beb97a9939&page=queryresults
+[0m17:56:34.180969 [debug] [Thread-1 (]: Timing info for model.ae_bootcamp.stg_customer (execute): 17:56:32.204315 => 17:56:34.180851
+[0m17:56:34.181412 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '0e677f70-4a5d-4af2-9134-ba13327e0b1c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbcf15458a0>]}
+[0m17:56:34.181826 [info ] [Thread-1 (]: 1 of 19 OK created sql view model dbt_abel.stg_customer ........................ [[32mCREATE VIEW (0 processed)[0m in 1.98s]
+[0m17:56:34.182235 [debug] [Thread-1 (]: Finished running node model.ae_bootcamp.stg_customer
+[0m17:56:34.182494 [debug] [Thread-1 (]: Began running node model.ae_bootcamp.stg_employee_privileges
+[0m17:56:34.182775 [info ] [Thread-1 (]: 2 of 19 START sql view model dbt_abel.stg_employee_privileges .................. [RUN]
+[0m17:56:34.183221 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.ae_bootcamp.stg_customer, now model.ae_bootcamp.stg_employee_privileges)
+[0m17:56:34.183479 [debug] [Thread-1 (]: Began compiling node model.ae_bootcamp.stg_employee_privileges
+[0m17:56:34.185170 [debug] [Thread-1 (]: Writing injected SQL for node "model.ae_bootcamp.stg_employee_privileges"
+[0m17:56:34.185735 [debug] [Thread-1 (]: Timing info for model.ae_bootcamp.stg_employee_privileges (compile): 17:56:34.183625 => 17:56:34.185577
+[0m17:56:34.185943 [debug] [Thread-1 (]: Began executing node model.ae_bootcamp.stg_employee_privileges
+[0m17:56:34.187655 [debug] [Thread-1 (]: Writing runtime sql for node "model.ae_bootcamp.stg_employee_privileges"
+[0m17:56:34.187956 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m17:56:34.188180 [debug] [Thread-1 (]: On model.ae_bootcamp.stg_employee_privileges: /* {"app": "dbt", "dbt_version": "1.5.1", "profile_name": "ae_bootcamp", "target_name": "dev", "node_id": "model.ae_bootcamp.stg_employee_privileges"} */
+
+
+  create or replace view `sunny-catwalk-388616`.`dbt_abel`.`stg_employee_privileges`
+  OPTIONS()
+  as with source as 
+(
+    select * from `sunny-catwalk-388616`.`dl_northwind`.`employee_privileges`
+)
+select * from source;
+
+
+[0m17:56:36.009629 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=sunny-catwalk-388616&j=bq:asia-southeast2:dc09dd73-f879-45a8-acef-a8a92b8ee556&page=queryresults
+[0m17:56:36.012205 [debug] [Thread-1 (]: Timing info for model.ae_bootcamp.stg_employee_privileges (execute): 17:56:34.186063 => 17:56:36.012051
+[0m17:56:36.012875 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '0e677f70-4a5d-4af2-9134-ba13327e0b1c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbcf1544520>]}
+[0m17:56:36.013502 [info ] [Thread-1 (]: 2 of 19 OK created sql view model dbt_abel.stg_employee_privileges ............. [[32mCREATE VIEW (0 processed)[0m in 1.83s]
+[0m17:56:36.013983 [debug] [Thread-1 (]: Finished running node model.ae_bootcamp.stg_employee_privileges
+[0m17:56:36.014408 [debug] [Thread-1 (]: Began running node model.ae_bootcamp.stg_employees
+[0m17:56:36.014983 [info ] [Thread-1 (]: 3 of 19 START sql view model dbt_abel.stg_employees ............................ [RUN]
+[0m17:56:36.015534 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.ae_bootcamp.stg_employee_privileges, now model.ae_bootcamp.stg_employees)
+[0m17:56:36.015891 [debug] [Thread-1 (]: Began compiling node model.ae_bootcamp.stg_employees
+[0m17:56:36.019830 [debug] [Thread-1 (]: Writing injected SQL for node "model.ae_bootcamp.stg_employees"
+[0m17:56:36.020560 [debug] [Thread-1 (]: Timing info for model.ae_bootcamp.stg_employees (compile): 17:56:36.016315 => 17:56:36.020306
+[0m17:56:36.020959 [debug] [Thread-1 (]: Began executing node model.ae_bootcamp.stg_employees
+[0m17:56:36.024601 [debug] [Thread-1 (]: Writing runtime sql for node "model.ae_bootcamp.stg_employees"
+[0m17:56:36.025707 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m17:56:36.026415 [debug] [Thread-1 (]: On model.ae_bootcamp.stg_employees: /* {"app": "dbt", "dbt_version": "1.5.1", "profile_name": "ae_bootcamp", "target_name": "dev", "node_id": "model.ae_bootcamp.stg_employees"} */
+
+
+  create or replace view `sunny-catwalk-388616`.`dbt_abel`.`stg_employees`
+  OPTIONS()
+  as with source as 
+(
+    select * from `sunny-catwalk-388616`.`dl_northwind`.`employees`
+)
+select * from source;
+
+
+[0m17:56:36.433807 [debug] [Thread-1 (]: BigQuery adapter: Unhandled error while running:
+/* {"app": "dbt", "dbt_version": "1.5.1", "profile_name": "ae_bootcamp", "target_name": "dev", "node_id": "model.ae_bootcamp.stg_employees"} */
+
+
+  create or replace view `sunny-catwalk-388616`.`dbt_abel`.`stg_employees`
+  OPTIONS()
+  as with source as 
+(
+    select * from `sunny-catwalk-388616`.`dl_northwind`.`employees`
+)
+select * from source;
+
+
+[0m17:56:36.434337 [debug] [Thread-1 (]: BigQuery adapter: 404 Not found: Table sunny-catwalk-388616:dl_northwind.employees was not found in location asia-southeast2
+
+Location: asia-southeast2
+Job ID: 11c460ef-a13e-4153-9d3c-c7b93a40fedd
+
+[0m17:56:36.435019 [debug] [Thread-1 (]: Timing info for model.ae_bootcamp.stg_employees (execute): 17:56:36.021223 => 17:56:36.434780
+[0m17:56:36.453967 [debug] [Thread-1 (]: Runtime Error in model stg_employees (models/staging/stg_employees.sql)
+  404 Not found: Table sunny-catwalk-388616:dl_northwind.employees was not found in location asia-southeast2
+  
+  Location: asia-southeast2
+  Job ID: 11c460ef-a13e-4153-9d3c-c7b93a40fedd
+  
+[0m17:56:36.454943 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '0e677f70-4a5d-4af2-9134-ba13327e0b1c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbcf1545900>]}
+[0m17:56:36.455755 [error] [Thread-1 (]: 3 of 19 ERROR creating sql view model dbt_abel.stg_employees ................... [[31mERROR[0m in 0.44s]
+[0m17:56:36.456374 [debug] [Thread-1 (]: Finished running node model.ae_bootcamp.stg_employees
+[0m17:56:36.457039 [debug] [Thread-1 (]: Began running node model.ae_bootcamp.stg_inventory_transaction_types
+[0m17:56:36.457877 [info ] [Thread-1 (]: 4 of 19 START sql view model dbt_abel.stg_inventory_transaction_types .......... [RUN]
+[0m17:56:36.459620 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.ae_bootcamp.stg_employees, now model.ae_bootcamp.stg_inventory_transaction_types)
+[0m17:56:36.460897 [debug] [Thread-1 (]: Began compiling node model.ae_bootcamp.stg_inventory_transaction_types
+[0m17:56:36.465246 [debug] [Thread-1 (]: Writing injected SQL for node "model.ae_bootcamp.stg_inventory_transaction_types"
+[0m17:56:36.466076 [debug] [Thread-1 (]: Timing info for model.ae_bootcamp.stg_inventory_transaction_types (compile): 17:56:36.461383 => 17:56:36.465772
+[0m17:56:36.466455 [debug] [Thread-1 (]: Began executing node model.ae_bootcamp.stg_inventory_transaction_types
+[0m17:56:36.469261 [debug] [Thread-1 (]: Writing runtime sql for node "model.ae_bootcamp.stg_inventory_transaction_types"
+[0m17:56:36.469804 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m17:56:36.470372 [debug] [Thread-1 (]: On model.ae_bootcamp.stg_inventory_transaction_types: /* {"app": "dbt", "dbt_version": "1.5.1", "profile_name": "ae_bootcamp", "target_name": "dev", "node_id": "model.ae_bootcamp.stg_inventory_transaction_types"} */
+
+
+  create or replace view `sunny-catwalk-388616`.`dbt_abel`.`stg_inventory_transaction_types`
+  OPTIONS()
+  as with source as 
+(
+    select * from `sunny-catwalk-388616`.`dl_northwind`.`inventory_transaction_types`
+)
+select * from source;
+
+
+[0m17:56:38.289996 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=sunny-catwalk-388616&j=bq:asia-southeast2:4b9a0eb6-8ac1-454f-8907-5f9ca7fc2540&page=queryresults
+[0m17:56:38.293748 [debug] [Thread-1 (]: Timing info for model.ae_bootcamp.stg_inventory_transaction_types (execute): 17:56:36.466649 => 17:56:38.293341
+[0m17:56:38.294942 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '0e677f70-4a5d-4af2-9134-ba13327e0b1c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbcf163f910>]}
+[0m17:56:38.296336 [info ] [Thread-1 (]: 4 of 19 OK created sql view model dbt_abel.stg_inventory_transaction_types ..... [[32mCREATE VIEW (0 processed)[0m in 1.84s]
+[0m17:56:38.297571 [debug] [Thread-1 (]: Finished running node model.ae_bootcamp.stg_inventory_transaction_types
+[0m17:56:38.298272 [debug] [Thread-1 (]: Began running node model.ae_bootcamp.stg_inventory_transactions
+[0m17:56:38.298959 [info ] [Thread-1 (]: 5 of 19 START sql view model dbt_abel.stg_inventory_transactions ............... [RUN]
+[0m17:56:38.304024 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.ae_bootcamp.stg_inventory_transaction_types, now model.ae_bootcamp.stg_inventory_transactions)
+[0m17:56:38.304585 [debug] [Thread-1 (]: Began compiling node model.ae_bootcamp.stg_inventory_transactions
+[0m17:56:38.312698 [debug] [Thread-1 (]: Writing injected SQL for node "model.ae_bootcamp.stg_inventory_transactions"
+[0m17:56:38.313389 [debug] [Thread-1 (]: Timing info for model.ae_bootcamp.stg_inventory_transactions (compile): 17:56:38.304850 => 17:56:38.313206
+[0m17:56:38.313687 [debug] [Thread-1 (]: Began executing node model.ae_bootcamp.stg_inventory_transactions
+[0m17:56:38.317676 [debug] [Thread-1 (]: Writing runtime sql for node "model.ae_bootcamp.stg_inventory_transactions"
+[0m17:56:38.318068 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m17:56:38.318320 [debug] [Thread-1 (]: On model.ae_bootcamp.stg_inventory_transactions: /* {"app": "dbt", "dbt_version": "1.5.1", "profile_name": "ae_bootcamp", "target_name": "dev", "node_id": "model.ae_bootcamp.stg_inventory_transactions"} */
+
+
+  create or replace view `sunny-catwalk-388616`.`dbt_abel`.`stg_inventory_transactions`
+  OPTIONS()
+  as with source as 
+(
+    select * from `sunny-catwalk-388616`.`dl_northwind`.`inventory_transactions`
+)
+select * from source;
+
+
+[0m17:56:40.123643 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=sunny-catwalk-388616&j=bq:asia-southeast2:11cff03f-c1c9-44bd-aec0-693da3c54bf0&page=queryresults
+[0m17:56:40.125948 [debug] [Thread-1 (]: Timing info for model.ae_bootcamp.stg_inventory_transactions (execute): 17:56:38.313958 => 17:56:40.125754
+[0m17:56:40.126922 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '0e677f70-4a5d-4af2-9134-ba13327e0b1c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbcf378bbb0>]}
+[0m17:56:40.127627 [info ] [Thread-1 (]: 5 of 19 OK created sql view model dbt_abel.stg_inventory_transactions .......... [[32mCREATE VIEW (0 processed)[0m in 1.82s]
+[0m17:56:40.128265 [debug] [Thread-1 (]: Finished running node model.ae_bootcamp.stg_inventory_transactions
+[0m17:56:40.128746 [debug] [Thread-1 (]: Began running node model.ae_bootcamp.stg_invoices
+[0m17:56:40.129157 [info ] [Thread-1 (]: 6 of 19 START sql view model dbt_abel.stg_invoices ............................. [RUN]
+[0m17:56:40.129810 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.ae_bootcamp.stg_inventory_transactions, now model.ae_bootcamp.stg_invoices)
+[0m17:56:40.130258 [debug] [Thread-1 (]: Began compiling node model.ae_bootcamp.stg_invoices
+[0m17:56:40.132855 [debug] [Thread-1 (]: Writing injected SQL for node "model.ae_bootcamp.stg_invoices"
+[0m17:56:40.133488 [debug] [Thread-1 (]: Timing info for model.ae_bootcamp.stg_invoices (compile): 17:56:40.130461 => 17:56:40.133226
+[0m17:56:40.133811 [debug] [Thread-1 (]: Began executing node model.ae_bootcamp.stg_invoices
+[0m17:56:40.136014 [debug] [Thread-1 (]: Writing runtime sql for node "model.ae_bootcamp.stg_invoices"
+[0m17:56:40.136779 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m17:56:40.137158 [debug] [Thread-1 (]: On model.ae_bootcamp.stg_invoices: /* {"app": "dbt", "dbt_version": "1.5.1", "profile_name": "ae_bootcamp", "target_name": "dev", "node_id": "model.ae_bootcamp.stg_invoices"} */
+
+
+  create or replace view `sunny-catwalk-388616`.`dbt_abel`.`stg_invoices`
+  OPTIONS()
+  as with source as 
+(
+    select * from `sunny-catwalk-388616`.`dl_northwind`.`invoices`
+)
+select * from source;
+
+
+[0m17:56:41.818047 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=sunny-catwalk-388616&j=bq:asia-southeast2:06cc8d05-3ab9-459e-8a4a-52a45b14b23d&page=queryresults
+[0m17:56:41.820205 [debug] [Thread-1 (]: Timing info for model.ae_bootcamp.stg_invoices (execute): 17:56:40.133969 => 17:56:41.820093
+[0m17:56:41.820662 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '0e677f70-4a5d-4af2-9134-ba13327e0b1c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbcf3b81750>]}
+[0m17:56:41.821059 [info ] [Thread-1 (]: 6 of 19 OK created sql view model dbt_abel.stg_invoices ........................ [[32mCREATE VIEW (0 processed)[0m in 1.69s]
+[0m17:56:41.821468 [debug] [Thread-1 (]: Finished running node model.ae_bootcamp.stg_invoices
+[0m17:56:41.821749 [debug] [Thread-1 (]: Began running node model.ae_bootcamp.stg_order_details
+[0m17:56:41.822046 [info ] [Thread-1 (]: 7 of 19 START sql view model dbt_abel.stg_order_details ........................ [RUN]
+[0m17:56:41.822631 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.ae_bootcamp.stg_invoices, now model.ae_bootcamp.stg_order_details)
+[0m17:56:41.822887 [debug] [Thread-1 (]: Began compiling node model.ae_bootcamp.stg_order_details
+[0m17:56:41.824632 [debug] [Thread-1 (]: Writing injected SQL for node "model.ae_bootcamp.stg_order_details"
+[0m17:56:41.825443 [debug] [Thread-1 (]: Timing info for model.ae_bootcamp.stg_order_details (compile): 17:56:41.823045 => 17:56:41.825172
+[0m17:56:41.825672 [debug] [Thread-1 (]: Began executing node model.ae_bootcamp.stg_order_details
+[0m17:56:41.828334 [debug] [Thread-1 (]: Writing runtime sql for node "model.ae_bootcamp.stg_order_details"
+[0m17:56:41.828827 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m17:56:41.829047 [debug] [Thread-1 (]: On model.ae_bootcamp.stg_order_details: /* {"app": "dbt", "dbt_version": "1.5.1", "profile_name": "ae_bootcamp", "target_name": "dev", "node_id": "model.ae_bootcamp.stg_order_details"} */
+
+
+  create or replace view `sunny-catwalk-388616`.`dbt_abel`.`stg_order_details`
+  OPTIONS()
+  as with source as 
+(
+    select * from `sunny-catwalk-388616`.`dl_northwind`.`order_details`
+)
+select * from source;
+
+
+[0m17:56:43.801731 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=sunny-catwalk-388616&j=bq:asia-southeast2:b7d6ceb3-30e5-4932-ae2f-e5786cd1aed4&page=queryresults
+[0m17:56:43.805005 [debug] [Thread-1 (]: Timing info for model.ae_bootcamp.stg_order_details (execute): 17:56:41.825789 => 17:56:43.804685
+[0m17:56:43.806141 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '0e677f70-4a5d-4af2-9134-ba13327e0b1c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbcf3b82740>]}
+[0m17:56:43.807105 [info ] [Thread-1 (]: 7 of 19 OK created sql view model dbt_abel.stg_order_details ................... [[32mCREATE VIEW (0 processed)[0m in 1.98s]
+[0m17:56:43.808109 [debug] [Thread-1 (]: Finished running node model.ae_bootcamp.stg_order_details
+[0m17:56:43.808770 [debug] [Thread-1 (]: Began running node model.ae_bootcamp.stg_order_details_status
+[0m17:56:43.809462 [info ] [Thread-1 (]: 8 of 19 START sql view model dbt_abel.stg_order_details_status ................. [RUN]
+[0m17:56:43.811634 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.ae_bootcamp.stg_order_details, now model.ae_bootcamp.stg_order_details_status)
+[0m17:56:43.814230 [debug] [Thread-1 (]: Began compiling node model.ae_bootcamp.stg_order_details_status
+[0m17:56:43.819032 [debug] [Thread-1 (]: Writing injected SQL for node "model.ae_bootcamp.stg_order_details_status"
+[0m17:56:43.821713 [debug] [Thread-1 (]: Timing info for model.ae_bootcamp.stg_order_details_status (compile): 17:56:43.814458 => 17:56:43.821463
+[0m17:56:43.821954 [debug] [Thread-1 (]: Began executing node model.ae_bootcamp.stg_order_details_status
+[0m17:56:43.824328 [debug] [Thread-1 (]: Writing runtime sql for node "model.ae_bootcamp.stg_order_details_status"
+[0m17:56:43.825134 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m17:56:43.825727 [debug] [Thread-1 (]: On model.ae_bootcamp.stg_order_details_status: /* {"app": "dbt", "dbt_version": "1.5.1", "profile_name": "ae_bootcamp", "target_name": "dev", "node_id": "model.ae_bootcamp.stg_order_details_status"} */
+
+
+  create or replace view `sunny-catwalk-388616`.`dbt_abel`.`stg_order_details_status`
+  OPTIONS()
+  as with source as 
+(
+    select * from `sunny-catwalk-388616`.`dl_northwind`.`order_details_status`
+)
+select * from source;
+
+
+[0m17:56:44.266979 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=sunny-catwalk-388616&j=bq:asia-southeast2:dad75cb6-af3f-4c3f-b478-5de4d1d3bbdd&page=queryresults
+[0m17:56:44.270020 [debug] [Thread-1 (]: Timing info for model.ae_bootcamp.stg_order_details_status (execute): 17:56:43.822150 => 17:56:44.269736
+[0m17:56:44.270964 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '0e677f70-4a5d-4af2-9134-ba13327e0b1c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbcf15829b0>]}
+[0m17:56:44.271775 [info ] [Thread-1 (]: 8 of 19 OK created sql view model dbt_abel.stg_order_details_status ............ [[32mCREATE VIEW (0 processed)[0m in 0.46s]
+[0m17:56:44.272602 [debug] [Thread-1 (]: Finished running node model.ae_bootcamp.stg_order_details_status
+[0m17:56:44.273087 [debug] [Thread-1 (]: Began running node model.ae_bootcamp.stg_orders
+[0m17:56:44.273535 [info ] [Thread-1 (]: 9 of 19 START sql view model dbt_abel.stg_orders ............................... [RUN]
+[0m17:56:44.274156 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.ae_bootcamp.stg_order_details_status, now model.ae_bootcamp.stg_orders)
+[0m17:56:44.274480 [debug] [Thread-1 (]: Began compiling node model.ae_bootcamp.stg_orders
+[0m17:56:44.288595 [debug] [Thread-1 (]: Writing injected SQL for node "model.ae_bootcamp.stg_orders"
+[0m17:56:44.289205 [debug] [Thread-1 (]: Timing info for model.ae_bootcamp.stg_orders (compile): 17:56:44.274722 => 17:56:44.289022
+[0m17:56:44.289455 [debug] [Thread-1 (]: Began executing node model.ae_bootcamp.stg_orders
+[0m17:56:44.291212 [debug] [Thread-1 (]: Writing runtime sql for node "model.ae_bootcamp.stg_orders"
+[0m17:56:44.300219 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m17:56:44.300731 [debug] [Thread-1 (]: On model.ae_bootcamp.stg_orders: /* {"app": "dbt", "dbt_version": "1.5.1", "profile_name": "ae_bootcamp", "target_name": "dev", "node_id": "model.ae_bootcamp.stg_orders"} */
+
+
+  create or replace view `sunny-catwalk-388616`.`dbt_abel`.`stg_orders`
+  OPTIONS()
+  as with source as 
+(
+    select * from `sunny-catwalk-388616`.`dl_northwind`.`orders`
+)
+select * from source;
+
+
+[0m17:56:46.067663 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=sunny-catwalk-388616&j=bq:asia-southeast2:12608f5b-d595-44b7-a489-ae4dc9e6c64d&page=queryresults
+[0m17:56:46.070988 [debug] [Thread-1 (]: Timing info for model.ae_bootcamp.stg_orders (execute): 17:56:44.289584 => 17:56:46.070671
+[0m17:56:46.072212 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '0e677f70-4a5d-4af2-9134-ba13327e0b1c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbcf152ece0>]}
+[0m17:56:46.073194 [info ] [Thread-1 (]: 9 of 19 OK created sql view model dbt_abel.stg_orders .......................... [[32mCREATE VIEW (0 processed)[0m in 1.80s]
+[0m17:56:46.074168 [debug] [Thread-1 (]: Finished running node model.ae_bootcamp.stg_orders
+[0m17:56:46.074779 [debug] [Thread-1 (]: Began running node model.ae_bootcamp.stg_orders_status
+[0m17:56:46.075338 [info ] [Thread-1 (]: 10 of 19 START sql view model dbt_abel.stg_orders_status ....................... [RUN]
+[0m17:56:46.076127 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.ae_bootcamp.stg_orders, now model.ae_bootcamp.stg_orders_status)
+[0m17:56:46.078361 [debug] [Thread-1 (]: Began compiling node model.ae_bootcamp.stg_orders_status
+[0m17:56:46.081105 [debug] [Thread-1 (]: Writing injected SQL for node "model.ae_bootcamp.stg_orders_status"
+[0m17:56:46.081469 [debug] [Thread-1 (]: Timing info for model.ae_bootcamp.stg_orders_status (compile): 17:56:46.078582 => 17:56:46.081346
+[0m17:56:46.081656 [debug] [Thread-1 (]: Began executing node model.ae_bootcamp.stg_orders_status
+[0m17:56:46.083372 [debug] [Thread-1 (]: Writing runtime sql for node "model.ae_bootcamp.stg_orders_status"
+[0m17:56:46.083653 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m17:56:46.083864 [debug] [Thread-1 (]: On model.ae_bootcamp.stg_orders_status: /* {"app": "dbt", "dbt_version": "1.5.1", "profile_name": "ae_bootcamp", "target_name": "dev", "node_id": "model.ae_bootcamp.stg_orders_status"} */
+
+
+  create or replace view `sunny-catwalk-388616`.`dbt_abel`.`stg_orders_status`
+  OPTIONS()
+  as with source as 
+(
+    select * from `sunny-catwalk-388616`.`dl_northwind`.`orders_status`
+)
+select * from source;
+
+
+[0m17:56:47.747204 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=sunny-catwalk-388616&j=bq:asia-southeast2:1ba8c6c9-371f-4a91-8cdd-a4504ab28b4a&page=queryresults
+[0m17:56:47.748803 [debug] [Thread-1 (]: Timing info for model.ae_bootcamp.stg_orders_status (execute): 17:56:46.081770 => 17:56:47.748635
+[0m17:56:47.749283 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '0e677f70-4a5d-4af2-9134-ba13327e0b1c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbcf35872e0>]}
+[0m17:56:47.749666 [info ] [Thread-1 (]: 10 of 19 OK created sql view model dbt_abel.stg_orders_status .................. [[32mCREATE VIEW (0 processed)[0m in 1.67s]
+[0m17:56:47.750056 [debug] [Thread-1 (]: Finished running node model.ae_bootcamp.stg_orders_status
+[0m17:56:47.750313 [debug] [Thread-1 (]: Began running node model.ae_bootcamp.stg_orders_tax_status
+[0m17:56:47.750571 [info ] [Thread-1 (]: 11 of 19 START sql view model dbt_abel.stg_orders_tax_status ................... [RUN]
+[0m17:56:47.750935 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.ae_bootcamp.stg_orders_status, now model.ae_bootcamp.stg_orders_tax_status)
+[0m17:56:47.751117 [debug] [Thread-1 (]: Began compiling node model.ae_bootcamp.stg_orders_tax_status
+[0m17:56:47.753534 [debug] [Thread-1 (]: Writing injected SQL for node "model.ae_bootcamp.stg_orders_tax_status"
+[0m17:56:47.757148 [debug] [Thread-1 (]: Timing info for model.ae_bootcamp.stg_orders_tax_status (compile): 17:56:47.751222 => 17:56:47.756940
+[0m17:56:47.757424 [debug] [Thread-1 (]: Began executing node model.ae_bootcamp.stg_orders_tax_status
+[0m17:56:47.759867 [debug] [Thread-1 (]: Writing runtime sql for node "model.ae_bootcamp.stg_orders_tax_status"
+[0m17:56:47.760228 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m17:56:47.761639 [debug] [Thread-1 (]: On model.ae_bootcamp.stg_orders_tax_status: /* {"app": "dbt", "dbt_version": "1.5.1", "profile_name": "ae_bootcamp", "target_name": "dev", "node_id": "model.ae_bootcamp.stg_orders_tax_status"} */
+
+
+  create or replace view `sunny-catwalk-388616`.`dbt_abel`.`stg_orders_tax_status`
+  OPTIONS()
+  as with source as 
+(
+    select * from `sunny-catwalk-388616`.`dl_northwind`.`orders_tax_status`
+)
+select * from source;
+
+
+[0m17:56:49.503163 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=sunny-catwalk-388616&j=bq:asia-southeast2:ceaf436c-2bb5-49b3-94a6-096bde8c7211&page=queryresults
+[0m17:56:49.505980 [debug] [Thread-1 (]: Timing info for model.ae_bootcamp.stg_orders_tax_status (execute): 17:56:47.757630 => 17:56:49.505694
+[0m17:56:49.507002 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '0e677f70-4a5d-4af2-9134-ba13327e0b1c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbcf35db0a0>]}
+[0m17:56:49.507895 [info ] [Thread-1 (]: 11 of 19 OK created sql view model dbt_abel.stg_orders_tax_status .............. [[32mCREATE VIEW (0 processed)[0m in 1.76s]
+[0m17:56:49.508868 [debug] [Thread-1 (]: Finished running node model.ae_bootcamp.stg_orders_tax_status
+[0m17:56:49.509493 [debug] [Thread-1 (]: Began running node model.ae_bootcamp.stg_privileges
+[0m17:56:49.510142 [info ] [Thread-1 (]: 12 of 19 START sql view model dbt_abel.stg_privileges .......................... [RUN]
+[0m17:56:49.511152 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.ae_bootcamp.stg_orders_tax_status, now model.ae_bootcamp.stg_privileges)
+[0m17:56:49.511959 [debug] [Thread-1 (]: Began compiling node model.ae_bootcamp.stg_privileges
+[0m17:56:49.518710 [debug] [Thread-1 (]: Writing injected SQL for node "model.ae_bootcamp.stg_privileges"
+[0m17:56:49.519368 [debug] [Thread-1 (]: Timing info for model.ae_bootcamp.stg_privileges (compile): 17:56:49.512473 => 17:56:49.519185
+[0m17:56:49.519632 [debug] [Thread-1 (]: Began executing node model.ae_bootcamp.stg_privileges
+[0m17:56:49.521856 [debug] [Thread-1 (]: Writing runtime sql for node "model.ae_bootcamp.stg_privileges"
+[0m17:56:49.522142 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m17:56:49.522342 [debug] [Thread-1 (]: On model.ae_bootcamp.stg_privileges: /* {"app": "dbt", "dbt_version": "1.5.1", "profile_name": "ae_bootcamp", "target_name": "dev", "node_id": "model.ae_bootcamp.stg_privileges"} */
+
+
+  create or replace view `sunny-catwalk-388616`.`dbt_abel`.`stg_privileges`
+  OPTIONS()
+  as with source as 
+(
+    select * from `sunny-catwalk-388616`.`dl_northwind`.`privileges`
+)
+select * from source;
+
+
+[0m17:56:51.164603 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=sunny-catwalk-388616&j=bq:asia-southeast2:07b05424-f13b-4e7b-b919-ba1fd381cd06&page=queryresults
+[0m17:56:51.165929 [debug] [Thread-1 (]: Timing info for model.ae_bootcamp.stg_privileges (execute): 17:56:49.519780 => 17:56:51.165804
+[0m17:56:51.166408 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '0e677f70-4a5d-4af2-9134-ba13327e0b1c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbcf152ece0>]}
+[0m17:56:51.166782 [info ] [Thread-1 (]: 12 of 19 OK created sql view model dbt_abel.stg_privileges ..................... [[32mCREATE VIEW (0 processed)[0m in 1.66s]
+[0m17:56:51.167259 [debug] [Thread-1 (]: Finished running node model.ae_bootcamp.stg_privileges
+[0m17:56:51.167508 [debug] [Thread-1 (]: Began running node model.ae_bootcamp.stg_products
+[0m17:56:51.167765 [info ] [Thread-1 (]: 13 of 19 START sql view model dbt_abel.stg_products ............................ [RUN]
+[0m17:56:51.168150 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.ae_bootcamp.stg_privileges, now model.ae_bootcamp.stg_products)
+[0m17:56:51.168338 [debug] [Thread-1 (]: Began compiling node model.ae_bootcamp.stg_products
+[0m17:56:51.172549 [debug] [Thread-1 (]: Writing injected SQL for node "model.ae_bootcamp.stg_products"
+[0m17:56:51.174037 [debug] [Thread-1 (]: Timing info for model.ae_bootcamp.stg_products (compile): 17:56:51.168444 => 17:56:51.173894
+[0m17:56:51.174531 [debug] [Thread-1 (]: Began executing node model.ae_bootcamp.stg_products
+[0m17:56:51.185557 [debug] [Thread-1 (]: Writing runtime sql for node "model.ae_bootcamp.stg_products"
+[0m17:56:51.185912 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m17:56:51.186142 [debug] [Thread-1 (]: On model.ae_bootcamp.stg_products: /* {"app": "dbt", "dbt_version": "1.5.1", "profile_name": "ae_bootcamp", "target_name": "dev", "node_id": "model.ae_bootcamp.stg_products"} */
+
+
+  create or replace view `sunny-catwalk-388616`.`dbt_abel`.`stg_products`
+  OPTIONS()
+  as with source as 
+(
+    select * from `sunny-catwalk-388616`.`dl_northwind`.`products`
+)
+select * from source;
+
+
+[0m17:56:51.645945 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=sunny-catwalk-388616&j=bq:asia-southeast2:2c17273f-95a1-40cd-ad82-d8f2bb323545&page=queryresults
+[0m17:56:51.648917 [debug] [Thread-1 (]: Timing info for model.ae_bootcamp.stg_products (execute): 17:56:51.183584 => 17:56:51.648623
+[0m17:56:51.649991 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '0e677f70-4a5d-4af2-9134-ba13327e0b1c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbcf3b80d60>]}
+[0m17:56:51.650873 [info ] [Thread-1 (]: 13 of 19 OK created sql view model dbt_abel.stg_products ....................... [[32mCREATE VIEW (0 processed)[0m in 0.48s]
+[0m17:56:51.651851 [debug] [Thread-1 (]: Finished running node model.ae_bootcamp.stg_products
+[0m17:56:51.652515 [debug] [Thread-1 (]: Began running node model.ae_bootcamp.stg_purchase_order_details
+[0m17:56:51.653154 [info ] [Thread-1 (]: 14 of 19 START sql view model dbt_abel.stg_purchase_order_details .............. [RUN]
+[0m17:56:51.654140 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.ae_bootcamp.stg_products, now model.ae_bootcamp.stg_purchase_order_details)
+[0m17:56:51.655927 [debug] [Thread-1 (]: Began compiling node model.ae_bootcamp.stg_purchase_order_details
+[0m17:56:51.661657 [debug] [Thread-1 (]: Writing injected SQL for node "model.ae_bootcamp.stg_purchase_order_details"
+[0m17:56:51.662153 [debug] [Thread-1 (]: Timing info for model.ae_bootcamp.stg_purchase_order_details (compile): 17:56:51.657649 => 17:56:51.661981
+[0m17:56:51.662404 [debug] [Thread-1 (]: Began executing node model.ae_bootcamp.stg_purchase_order_details
+[0m17:56:51.664267 [debug] [Thread-1 (]: Writing runtime sql for node "model.ae_bootcamp.stg_purchase_order_details"
+[0m17:56:51.667179 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m17:56:51.667666 [debug] [Thread-1 (]: On model.ae_bootcamp.stg_purchase_order_details: /* {"app": "dbt", "dbt_version": "1.5.1", "profile_name": "ae_bootcamp", "target_name": "dev", "node_id": "model.ae_bootcamp.stg_purchase_order_details"} */
+
+
+  create or replace view `sunny-catwalk-388616`.`dbt_abel`.`stg_purchase_order_details`
+  OPTIONS()
+  as with source as 
+(
+    select * from `sunny-catwalk-388616`.`dl_northwind`.`purchase_order_details`
+)
+select * from source;
+
+
+[0m17:56:52.438231 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=sunny-catwalk-388616&j=bq:asia-southeast2:6e47794d-c138-4cb5-a0c6-1ce40b530239&page=queryresults
+[0m17:56:52.441375 [debug] [Thread-1 (]: Timing info for model.ae_bootcamp.stg_purchase_order_details (execute): 17:56:51.662554 => 17:56:52.441004
+[0m17:56:52.442413 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '0e677f70-4a5d-4af2-9134-ba13327e0b1c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbcf37d4ca0>]}
+[0m17:56:52.443283 [info ] [Thread-1 (]: 14 of 19 OK created sql view model dbt_abel.stg_purchase_order_details ......... [[32mCREATE VIEW (0 processed)[0m in 0.79s]
+[0m17:56:52.444268 [debug] [Thread-1 (]: Finished running node model.ae_bootcamp.stg_purchase_order_details
+[0m17:56:52.445123 [debug] [Thread-1 (]: Began running node model.ae_bootcamp.stg_purchase_order_status
+[0m17:56:52.445754 [info ] [Thread-1 (]: 15 of 19 START sql view model dbt_abel.stg_purchase_order_status ............... [RUN]
+[0m17:56:52.446609 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.ae_bootcamp.stg_purchase_order_details, now model.ae_bootcamp.stg_purchase_order_status)
+[0m17:56:52.447086 [debug] [Thread-1 (]: Began compiling node model.ae_bootcamp.stg_purchase_order_status
+[0m17:56:52.458165 [debug] [Thread-1 (]: Writing injected SQL for node "model.ae_bootcamp.stg_purchase_order_status"
+[0m17:56:52.458630 [debug] [Thread-1 (]: Timing info for model.ae_bootcamp.stg_purchase_order_status (compile): 17:56:52.447360 => 17:56:52.458489
+[0m17:56:52.458833 [debug] [Thread-1 (]: Began executing node model.ae_bootcamp.stg_purchase_order_status
+[0m17:56:52.460563 [debug] [Thread-1 (]: Writing runtime sql for node "model.ae_bootcamp.stg_purchase_order_status"
+[0m17:56:52.469402 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m17:56:52.469689 [debug] [Thread-1 (]: On model.ae_bootcamp.stg_purchase_order_status: /* {"app": "dbt", "dbt_version": "1.5.1", "profile_name": "ae_bootcamp", "target_name": "dev", "node_id": "model.ae_bootcamp.stg_purchase_order_status"} */
+
+
+  create or replace view `sunny-catwalk-388616`.`dbt_abel`.`stg_purchase_order_status`
+  OPTIONS()
+  as with source as 
+(
+    select * from `sunny-catwalk-388616`.`dl_northwind`.`purchase_order_status`
+)
+select * from source;
+
+
+[0m17:56:54.380404 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=sunny-catwalk-388616&j=bq:asia-southeast2:41331f3e-189e-4d42-976f-9631cef3c40c&page=queryresults
+[0m17:56:54.381798 [debug] [Thread-1 (]: Timing info for model.ae_bootcamp.stg_purchase_order_status (execute): 17:56:52.458948 => 17:56:54.381670
+[0m17:56:54.382316 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '0e677f70-4a5d-4af2-9134-ba13327e0b1c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbcf37d6380>]}
+[0m17:56:54.382757 [info ] [Thread-1 (]: 15 of 19 OK created sql view model dbt_abel.stg_purchase_order_status .......... [[32mCREATE VIEW (0 processed)[0m in 1.94s]
+[0m17:56:54.383191 [debug] [Thread-1 (]: Finished running node model.ae_bootcamp.stg_purchase_order_status
+[0m17:56:54.383483 [debug] [Thread-1 (]: Began running node model.ae_bootcamp.stg_purchase_orders
+[0m17:56:54.383788 [info ] [Thread-1 (]: 16 of 19 START sql view model dbt_abel.stg_purchase_orders ..................... [RUN]
+[0m17:56:54.384354 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.ae_bootcamp.stg_purchase_order_status, now model.ae_bootcamp.stg_purchase_orders)
+[0m17:56:54.384662 [debug] [Thread-1 (]: Began compiling node model.ae_bootcamp.stg_purchase_orders
+[0m17:56:54.387581 [debug] [Thread-1 (]: Writing injected SQL for node "model.ae_bootcamp.stg_purchase_orders"
+[0m17:56:54.388481 [debug] [Thread-1 (]: Timing info for model.ae_bootcamp.stg_purchase_orders (compile): 17:56:54.384830 => 17:56:54.388339
+[0m17:56:54.388771 [debug] [Thread-1 (]: Began executing node model.ae_bootcamp.stg_purchase_orders
+[0m17:56:54.399104 [debug] [Thread-1 (]: Writing runtime sql for node "model.ae_bootcamp.stg_purchase_orders"
+[0m17:56:54.400853 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m17:56:54.401183 [debug] [Thread-1 (]: On model.ae_bootcamp.stg_purchase_orders: /* {"app": "dbt", "dbt_version": "1.5.1", "profile_name": "ae_bootcamp", "target_name": "dev", "node_id": "model.ae_bootcamp.stg_purchase_orders"} */
+
+
+  create or replace view `sunny-catwalk-388616`.`dbt_abel`.`stg_purchase_orders`
+  OPTIONS()
+  as with source as 
+(
+    select * from `sunny-catwalk-388616`.`dl_northwind`.`purchase_orders`
+)
+select * from source;
+
+
+[0m17:56:55.032349 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=sunny-catwalk-388616&j=bq:asia-southeast2:fccc9699-6939-4fcc-b112-53d9314adab6&page=queryresults
+[0m17:56:55.035835 [debug] [Thread-1 (]: Timing info for model.ae_bootcamp.stg_purchase_orders (execute): 17:56:54.388940 => 17:56:55.035524
+[0m17:56:55.036955 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '0e677f70-4a5d-4af2-9134-ba13327e0b1c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbcf37ea830>]}
+[0m17:56:55.038222 [info ] [Thread-1 (]: 16 of 19 OK created sql view model dbt_abel.stg_purchase_orders ................ [[32mCREATE VIEW (0 processed)[0m in 0.65s]
+[0m17:56:55.039212 [debug] [Thread-1 (]: Finished running node model.ae_bootcamp.stg_purchase_orders
+[0m17:56:55.039812 [debug] [Thread-1 (]: Began running node model.ae_bootcamp.stg_shippers
+[0m17:56:55.040354 [info ] [Thread-1 (]: 17 of 19 START sql view model dbt_abel.stg_shippers ............................ [RUN]
+[0m17:56:55.041160 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.ae_bootcamp.stg_purchase_orders, now model.ae_bootcamp.stg_shippers)
+[0m17:56:55.041744 [debug] [Thread-1 (]: Began compiling node model.ae_bootcamp.stg_shippers
+[0m17:56:55.046917 [debug] [Thread-1 (]: Writing injected SQL for node "model.ae_bootcamp.stg_shippers"
+[0m17:56:55.047502 [debug] [Thread-1 (]: Timing info for model.ae_bootcamp.stg_shippers (compile): 17:56:55.043535 => 17:56:55.047356
+[0m17:56:55.047702 [debug] [Thread-1 (]: Began executing node model.ae_bootcamp.stg_shippers
+[0m17:56:55.050620 [debug] [Thread-1 (]: Writing runtime sql for node "model.ae_bootcamp.stg_shippers"
+[0m17:56:55.051200 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m17:56:55.051449 [debug] [Thread-1 (]: On model.ae_bootcamp.stg_shippers: /* {"app": "dbt", "dbt_version": "1.5.1", "profile_name": "ae_bootcamp", "target_name": "dev", "node_id": "model.ae_bootcamp.stg_shippers"} */
+
+
+  create or replace view `sunny-catwalk-388616`.`dbt_abel`.`stg_shippers`
+  OPTIONS()
+  as with source as 
+(
+    select * from `sunny-catwalk-388616`.`dl_northwind`.`shippers`
+)
+select * from source;
+
+
+[0m17:56:56.795262 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=sunny-catwalk-388616&j=bq:asia-southeast2:d902a780-9170-4fa1-949c-c16001152852&page=queryresults
+[0m17:56:56.799111 [debug] [Thread-1 (]: Timing info for model.ae_bootcamp.stg_shippers (execute): 17:56:55.047876 => 17:56:56.798790
+[0m17:56:56.800173 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '0e677f70-4a5d-4af2-9134-ba13327e0b1c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbcf359f0a0>]}
+[0m17:56:56.801210 [info ] [Thread-1 (]: 17 of 19 OK created sql view model dbt_abel.stg_shippers ....................... [[32mCREATE VIEW (0 processed)[0m in 1.76s]
+[0m17:56:56.802125 [debug] [Thread-1 (]: Finished running node model.ae_bootcamp.stg_shippers
+[0m17:56:56.802702 [debug] [Thread-1 (]: Began running node model.ae_bootcamp.stg_strings
+[0m17:56:56.803227 [info ] [Thread-1 (]: 18 of 19 START sql view model dbt_abel.stg_strings ............................. [RUN]
+[0m17:56:56.804012 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.ae_bootcamp.stg_shippers, now model.ae_bootcamp.stg_strings)
+[0m17:56:56.804426 [debug] [Thread-1 (]: Began compiling node model.ae_bootcamp.stg_strings
+[0m17:56:56.814892 [debug] [Thread-1 (]: Writing injected SQL for node "model.ae_bootcamp.stg_strings"
+[0m17:56:56.815278 [debug] [Thread-1 (]: Timing info for model.ae_bootcamp.stg_strings (compile): 17:56:56.804688 => 17:56:56.815151
+[0m17:56:56.815463 [debug] [Thread-1 (]: Began executing node model.ae_bootcamp.stg_strings
+[0m17:56:56.817144 [debug] [Thread-1 (]: Writing runtime sql for node "model.ae_bootcamp.stg_strings"
+[0m17:56:56.817411 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m17:56:56.817606 [debug] [Thread-1 (]: On model.ae_bootcamp.stg_strings: /* {"app": "dbt", "dbt_version": "1.5.1", "profile_name": "ae_bootcamp", "target_name": "dev", "node_id": "model.ae_bootcamp.stg_strings"} */
+
+
+  create or replace view `sunny-catwalk-388616`.`dbt_abel`.`stg_strings`
+  OPTIONS()
+  as with source as 
+(
+    select * from `sunny-catwalk-388616`.`dl_northwind`.`strings`
+)
+select * from source;
+
+
+[0m17:56:58.493423 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=sunny-catwalk-388616&j=bq:asia-southeast2:ea8b04d5-be55-4968-b7cb-8f8106263abc&page=queryresults
+[0m17:56:58.496401 [debug] [Thread-1 (]: Timing info for model.ae_bootcamp.stg_strings (execute): 17:56:56.815570 => 17:56:58.496116
+[0m17:56:58.497361 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '0e677f70-4a5d-4af2-9134-ba13327e0b1c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbcf378ad10>]}
+[0m17:56:58.498154 [info ] [Thread-1 (]: 18 of 19 OK created sql view model dbt_abel.stg_strings ........................ [[32mCREATE VIEW (0 processed)[0m in 1.69s]
+[0m17:56:58.499027 [debug] [Thread-1 (]: Finished running node model.ae_bootcamp.stg_strings
+[0m17:56:58.499585 [debug] [Thread-1 (]: Began running node model.ae_bootcamp.stg_suppliers
+[0m17:56:58.500117 [info ] [Thread-1 (]: 19 of 19 START sql view model dbt_abel.stg_suppliers ........................... [RUN]
+[0m17:56:58.501059 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.ae_bootcamp.stg_strings, now model.ae_bootcamp.stg_suppliers)
+[0m17:56:58.501532 [debug] [Thread-1 (]: Began compiling node model.ae_bootcamp.stg_suppliers
+[0m17:56:58.509296 [debug] [Thread-1 (]: Writing injected SQL for node "model.ae_bootcamp.stg_suppliers"
+[0m17:56:58.510552 [debug] [Thread-1 (]: Timing info for model.ae_bootcamp.stg_suppliers (compile): 17:56:58.501800 => 17:56:58.510351
+[0m17:56:58.510919 [debug] [Thread-1 (]: Began executing node model.ae_bootcamp.stg_suppliers
+[0m17:56:58.513203 [debug] [Thread-1 (]: Writing runtime sql for node "model.ae_bootcamp.stg_suppliers"
+[0m17:56:58.513492 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m17:56:58.513696 [debug] [Thread-1 (]: On model.ae_bootcamp.stg_suppliers: /* {"app": "dbt", "dbt_version": "1.5.1", "profile_name": "ae_bootcamp", "target_name": "dev", "node_id": "model.ae_bootcamp.stg_suppliers"} */
+
+
+  create or replace view `sunny-catwalk-388616`.`dbt_abel`.`stg_suppliers`
+  OPTIONS()
+  as with source as 
+(
+    select * from `sunny-catwalk-388616`.`dl_northwind`.`suppliers`
+)
+select * from source;
+
+
+[0m17:56:59.411376 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=sunny-catwalk-388616&j=bq:asia-southeast2:0f91853d-bd11-4a1c-9cfe-e92cbc1ae84f&page=queryresults
+[0m17:56:59.414978 [debug] [Thread-1 (]: Timing info for model.ae_bootcamp.stg_suppliers (execute): 17:56:58.511044 => 17:56:59.414537
+[0m17:56:59.416124 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '0e677f70-4a5d-4af2-9134-ba13327e0b1c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbcf37d5480>]}
+[0m17:56:59.417065 [info ] [Thread-1 (]: 19 of 19 OK created sql view model dbt_abel.stg_suppliers ...................... [[32mCREATE VIEW (0 processed)[0m in 0.92s]
+[0m17:56:59.418049 [debug] [Thread-1 (]: Finished running node model.ae_bootcamp.stg_suppliers
+[0m17:56:59.421011 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m17:56:59.421462 [debug] [MainThread]: Connection 'model.ae_bootcamp.stg_suppliers' was properly closed.
+[0m17:56:59.421927 [info ] [MainThread]: 
+[0m17:56:59.422386 [info ] [MainThread]: Finished running 19 view models in 0 hours 0 minutes and 29.88 seconds (29.88s).
+[0m17:56:59.426062 [debug] [MainThread]: Command end result
+[0m17:56:59.441881 [info ] [MainThread]: 
+[0m17:56:59.442686 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m17:56:59.443254 [info ] [MainThread]: 
+[0m17:56:59.443712 [error] [MainThread]: [33mRuntime Error in model stg_employees (models/staging/stg_employees.sql)[0m
+[0m17:56:59.444227 [error] [MainThread]:   404 Not found: Table sunny-catwalk-388616:dl_northwind.employees was not found in location asia-southeast2
+[0m17:56:59.444675 [error] [MainThread]:   
+[0m17:56:59.445077 [error] [MainThread]:   Location: asia-southeast2
+[0m17:56:59.445585 [error] [MainThread]:   Job ID: 11c460ef-a13e-4153-9d3c-c7b93a40fedd
+[0m17:56:59.446002 [error] [MainThread]:   
+[0m17:56:59.446455 [info ] [MainThread]: 
+[0m17:56:59.446910 [info ] [MainThread]: Done. PASS=18 WARN=0 ERROR=1 SKIP=0 TOTAL=19
+[0m17:56:59.447717 [debug] [MainThread]: Command `dbt run` failed at 17:56:59.447570 after 30.26 seconds
+[0m17:56:59.448187 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbcf6be6500>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbcf58c63b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbcf58c7c40>]}
+[0m17:56:59.448627 [debug] [MainThread]: Flushing usage events
+[0m18:00:39.701517 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f864dd36590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f864c8aed70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f864c8aece0>]}
+
+
+============================== 18:00:39.703032 | 5f7a7382-0b9b-4a63-99a1-7005128ff05f ==============================
+[0m18:00:39.703032 [info ] [MainThread]: Running with dbt=1.5.1
+[0m18:00:39.703366 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': '/home/abelgideons/analytics-engineer-bootcamp/ae_bootcamp/logs', 'profiles_dir': '/home/abelgideons/.dbt', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m18:00:39.901717 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '5f7a7382-0b9b-4a63-99a1-7005128ff05f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f864db34be0>]}
+[0m18:00:39.911925 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '5f7a7382-0b9b-4a63-99a1-7005128ff05f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f864a7b8610>]}
+[0m18:00:39.919083 [debug] [MainThread]: checksum: 51f6b581eba8f8101bc020bf9faf8f96af641e2da86d581f66e2bdf0ff384b1c, vars: {}, profile: , target: , version: 1.5.1
+[0m18:00:39.931408 [debug] [MainThread]: Partial parsing enabled: 1 files deleted, 1 files added, 0 files changed.
+[0m18:00:39.931757 [debug] [MainThread]: Partial parsing: added file: ae_bootcamp://models/staging/stg_employee.sql
+[0m18:00:39.931972 [debug] [MainThread]: Partial parsing: deleted file: ae_bootcamp://models/staging/stg_employees.sql
+[0m18:00:39.943021 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_employee.sql
+[0m18:00:39.950743 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.ae_bootcamp.stg_employee' (models/staging/stg_employee.sql) depends on a source named 'northwind.employee' which was not found
+[0m18:00:39.951298 [debug] [MainThread]: Command `dbt run` failed at 18:00:39.951190 after 0.26 seconds
+[0m18:00:39.951573 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f864dd36590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f864a5ce440>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f864a5ce3b0>]}
+[0m18:00:39.951830 [debug] [MainThread]: Flushing usage events
+[0m18:01:25.727169 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbb7bb4e530>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbb7a6aec80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbb7a6aece0>]}
+
+
+============================== 18:01:25.728727 | 641fb8b8-6f3e-4ef0-b8d6-bd035b0dbe66 ==============================
+[0m18:01:25.728727 [info ] [MainThread]: Running with dbt=1.5.1
+[0m18:01:25.729369 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': '/home/abelgideons/analytics-engineer-bootcamp/ae_bootcamp/logs', 'profiles_dir': '/home/abelgideons/.dbt', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'log_format': 'default', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m18:01:25.923876 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '641fb8b8-6f3e-4ef0-b8d6-bd035b0dbe66', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbb7b404400>]}
+[0m18:01:25.931092 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '641fb8b8-6f3e-4ef0-b8d6-bd035b0dbe66', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbb785b9840>]}
+[0m18:01:25.938054 [debug] [MainThread]: checksum: 51f6b581eba8f8101bc020bf9faf8f96af641e2da86d581f66e2bdf0ff384b1c, vars: {}, profile: , target: , version: 1.5.1
+[0m18:01:25.950308 [debug] [MainThread]: Partial parsing enabled: 1 files deleted, 1 files added, 1 files changed.
+[0m18:01:25.950649 [debug] [MainThread]: Partial parsing: added file: ae_bootcamp://models/staging/stg_employee.sql
+[0m18:01:25.951439 [debug] [MainThread]: Partial parsing: updated file: ae_bootcamp://models/staging/source.yml
+[0m18:01:25.951636 [debug] [MainThread]: Partial parsing: deleted file: ae_bootcamp://models/staging/stg_employees.sql
+[0m18:01:25.963270 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_employee.sql
+[0m18:01:25.971077 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_customer.sql
+[0m18:01:25.973762 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_employee_privileges.sql
+[0m18:01:25.976566 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_inventory_transaction_types.sql
+[0m18:01:25.978896 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_inventory_transactions.sql
+[0m18:01:25.980928 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_invoices.sql
+[0m18:01:25.982842 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_order_details.sql
+[0m18:01:25.985245 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_order_details_status.sql
+[0m18:01:25.987254 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_orders_status.sql
+[0m18:01:25.989314 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_orders.sql
+[0m18:01:25.993497 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_orders_tax_status.sql
+[0m18:01:25.995592 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_privileges.sql
+[0m18:01:25.997534 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_products.sql
+[0m18:01:25.999615 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_purchase_order_details.sql
+[0m18:01:26.001547 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_purchase_order_status.sql
+[0m18:01:26.003627 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_purchase_orders.sql
+[0m18:01:26.005641 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_shippers.sql
+[0m18:01:26.007557 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_suppliers.sql
+[0m18:01:26.009529 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_strings.sql
+[0m18:01:26.029027 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.ae_bootcamp.example
+[0m18:01:26.033696 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '641fb8b8-6f3e-4ef0-b8d6-bd035b0dbe66', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbb76228760>]}
+[0m18:01:26.042218 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '641fb8b8-6f3e-4ef0-b8d6-bd035b0dbe66', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbb7839b970>]}
+[0m18:01:26.042702 [info ] [MainThread]: Found 19 models, 0 tests, 0 snapshots, 0 analyses, 353 macros, 0 operations, 0 seed files, 19 sources, 0 exposures, 0 metrics, 0 groups
+[0m18:01:26.043048 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '641fb8b8-6f3e-4ef0-b8d6-bd035b0dbe66', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbb7839b910>]}
+[0m18:01:26.044084 [info ] [MainThread]: 
+[0m18:01:26.044963 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m18:01:26.046004 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_sunny-catwalk-388616'
+[0m18:01:26.046325 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:01:27.073212 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_sunny-catwalk-388616, now list_sunny-catwalk-388616_dbt_abel)
+[0m18:01:27.073774 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m18:01:27.274714 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '641fb8b8-6f3e-4ef0-b8d6-bd035b0dbe66', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbb7839b4f0>]}
+[0m18:01:27.276120 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m18:01:27.276732 [info ] [MainThread]: 
+[0m18:01:27.296335 [debug] [Thread-1 (]: Began running node model.ae_bootcamp.stg_employee
+[0m18:01:27.296824 [info ] [Thread-1 (]: 1 of 1 START sql view model dbt_abel.stg_employee .............................. [RUN]
+[0m18:01:27.297378 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_sunny-catwalk-388616_dbt_abel, now model.ae_bootcamp.stg_employee)
+[0m18:01:27.297640 [debug] [Thread-1 (]: Began compiling node model.ae_bootcamp.stg_employee
+[0m18:01:27.301086 [debug] [Thread-1 (]: Writing injected SQL for node "model.ae_bootcamp.stg_employee"
+[0m18:01:27.301542 [debug] [Thread-1 (]: Timing info for model.ae_bootcamp.stg_employee (compile): 18:01:27.297792 => 18:01:27.301398
+[0m18:01:27.301765 [debug] [Thread-1 (]: Began executing node model.ae_bootcamp.stg_employee
+[0m18:01:27.329230 [debug] [Thread-1 (]: Writing runtime sql for node "model.ae_bootcamp.stg_employee"
+[0m18:01:27.329734 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:01:27.330099 [debug] [Thread-1 (]: On model.ae_bootcamp.stg_employee: /* {"app": "dbt", "dbt_version": "1.5.1", "profile_name": "ae_bootcamp", "target_name": "dev", "node_id": "model.ae_bootcamp.stg_employee"} */
+
+
+  create or replace view `sunny-catwalk-388616`.`dbt_abel`.`stg_employee`
+  OPTIONS()
+  as with source as 
+(
+    select * from `sunny-catwalk-388616`.`dl_northwind`.`employee`
+)
+select * from source;
+
+
+[0m18:01:27.911584 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=sunny-catwalk-388616&j=bq:asia-southeast2:7bdb69fb-2662-421a-9f48-6da1152c045e&page=queryresults
+[0m18:01:27.925181 [debug] [Thread-1 (]: Timing info for model.ae_bootcamp.stg_employee (execute): 18:01:27.301905 => 18:01:27.925039
+[0m18:01:27.925657 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '641fb8b8-6f3e-4ef0-b8d6-bd035b0dbe66', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbb783bd510>]}
+[0m18:01:27.926066 [info ] [Thread-1 (]: 1 of 1 OK created sql view model dbt_abel.stg_employee ......................... [[32mCREATE VIEW (0 processed)[0m in 0.63s]
+[0m18:01:27.926471 [debug] [Thread-1 (]: Finished running node model.ae_bootcamp.stg_employee
+[0m18:01:27.927696 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m18:01:27.927899 [debug] [MainThread]: Connection 'model.ae_bootcamp.stg_employee' was properly closed.
+[0m18:01:27.928117 [info ] [MainThread]: 
+[0m18:01:27.928387 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 1.88 seconds (1.88s).
+[0m18:01:27.928775 [debug] [MainThread]: Command end result
+[0m18:01:27.943095 [info ] [MainThread]: 
+[0m18:01:27.943766 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m18:01:27.944126 [info ] [MainThread]: 
+[0m18:01:27.944371 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m18:01:27.944803 [debug] [MainThread]: Command `dbt run` succeeded at 18:01:27.944728 after 2.22 seconds
+[0m18:01:27.945050 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbb7bb4e530>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbb76239db0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbb785c2980>]}
+[0m18:01:27.945296 [debug] [MainThread]: Flushing usage events
