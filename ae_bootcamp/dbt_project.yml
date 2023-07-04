@@ -19,6 +19,7 @@ seed-paths: ["seeds"]
 macro-paths: ["macros"]
 snapshot-paths: ["snapshots"]
 
+target-path: "target"  # directory which will store compiled SQL files
 clean-targets:         # directories to be removed by `dbt clean`
   - "target"
   - "dbt_packages"
@@ -27,11 +28,33 @@ clean-targets:         # directories to be removed by `dbt clean`
 # Configuring models
 # Full documentation: https://docs.getdbt.com/docs/configuring-models
 
-# In this example config, we tell dbt to build all models in the example/
-# directory as views. These settings can be overridden in the individual model
-# files using the `{{ config(...) }}` macro.
+# In this example config, we tell dbt to build all models in the example/ directory
+# as tables. These settings can be overridden in the individual model files
+# using the `{{ config(...) }}` macro.
 models:
   ae_bootcamp:
     # Config indicated by + and applies to all files under models/example/
-    example:
-      +materialized: view
+    staging:
+      +enabled: true
+      +materialized: table  # agar bentuk staging sebagai table bukan sebagai view
+      +schema: stg_northwind
+    warehouse:
+      +enabled: true
+      +materialized: table
+      +schema: dwh_northwind      
+      dim_date:
+        +materialized: view
+    analytics_obt:
+      +enabled: true
+      +materialized: table
+      +schema: obt_northwind
+
+
+
+
+
+
+
+
+
+
