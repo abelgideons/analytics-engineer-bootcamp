@@ -1,4 +1,1 @@
-# analytics-engineer-bootcamp
-# analytics-engineer-bootcamp
-# analytics-engineer-bootcamp
-# analytics-engineer-bootcamp
+# learning about analytics engineering
